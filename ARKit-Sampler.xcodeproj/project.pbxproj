@@ -29,6 +29,8 @@
 		8A9C49BF1F71ACAF00C8CB69 /* ARInteraction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49BC1F71ACAF00C8CB69 /* ARInteraction.storyboard */; };
 		8A9C49C01F71ACAF00C8CB69 /* ARInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49BD1F71ACAF00C8CB69 /* ARInteractionViewController.swift */; };
 		8A9C49C31F71B12D00C8CB69 /* VirtualObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */; };
+		8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49C51F71B99900C8CB69 /* ARMeasure.storyboard */; };
+		8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49C61F71B99900C8CB69 /* ARMeasureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		8A9C49BC1F71ACAF00C8CB69 /* ARInteraction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARInteraction.storyboard; sourceTree = "<group>"; };
 		8A9C49BD1F71ACAF00C8CB69 /* ARInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInteractionViewController.swift; sourceTree = "<group>"; };
 		8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectNode.swift; sourceTree = "<group>"; };
+		8A9C49C51F71B99900C8CB69 /* ARMeasure.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARMeasure.storyboard; sourceTree = "<group>"; };
+		8A9C49C61F71B99900C8CB69 /* ARMeasureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMeasureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				8A9C49B81F71AC7F00C8CB69 /* PlaneDetection */,
 				8A9C49BA1F71AC9100C8CB69 /* VirtualObject */,
 				8A9C49BB1F71ACAF00C8CB69 /* ARInteraction */,
+				8A9C49C41F71B99900C8CB69 /* ARMeasure */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -163,6 +168,15 @@
 			path = ARInteraction;
 			sourceTree = "<group>";
 		};
+		8A9C49C41F71B99900C8CB69 /* ARMeasure */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C49C61F71B99900C8CB69 /* ARMeasureViewController.swift */,
+				8A9C49C51F71B99900C8CB69 /* ARMeasure.storyboard */,
+			);
+			path = ARMeasure;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,6 +244,7 @@
 				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
 				8A086D9B1F7197F700951ABF /* models.scnassets in Resources */,
 				8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */,
+				8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +258,7 @@
 				8A086DA31F7198D900951ABF /* SceneKitUtils.swift in Sources */,
 				8A086DAB1F71A08900951ABF /* VirtualObjectViewController.swift in Sources */,
 				8A8921CC1F718E040087C2B0 /* ViewController.swift in Sources */,
+				8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
 				8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */,
 				8A086D991F7196A300951ABF /* SimpleViewController.swift in Sources */,

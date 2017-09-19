@@ -52,6 +52,18 @@ extension SCNNode {
         return node
     }
     
+    class func lineNode(length: CGFloat, color: UIColor) -> SCNNode {
+        let geometry = SCNCapsule(capRadius: 0.004, height: length)
+        geometry.materials.first?.diffuse.contents = color
+        let line = SCNNode(geometry: geometry)
+        
+        let node = SCNNode()
+        node.eulerAngles = SCNVector3Make(Float.pi/2, 0, 0)
+        node.addChildNode(line)
+        
+        return node
+    }
+
     func loadDuck() {
         guard let scene = SCNScene(named: "duck.scn", inDirectory: "models.scnassets/duck") else {fatalError()}
         for child in scene.rootNode.childNodes {

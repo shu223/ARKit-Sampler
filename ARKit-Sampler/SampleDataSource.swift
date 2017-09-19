@@ -43,5 +43,10 @@ struct SampleDataSource {
             detail: "Interact with virtual objects or detected plane anchors.",
             classPrefix: "ARInteraction"
         ),
+        Sample(
+            title: "AR Measure",
+            detail: "Measure a length between 2 points in the real space.",
+            classPrefix: "ARMeasure"
+        ),
         ]
 }
