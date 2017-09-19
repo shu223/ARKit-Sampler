@@ -63,7 +63,7 @@ extension SCNNode {
 
 extension SCNView {
     
-    func enableEnvironmentMapWithIntensity(_ intensity: CGFloat) {
+    private func enableEnvironmentMapWithIntensity(_ intensity: CGFloat) {
         if scene?.lightingEnvironment.contents == nil {
             if let environmentMap = UIImage(named: "models.scnassets/sharedImages/environment_blur.exr") {
                 scene?.lightingEnvironment.contents = environmentMap
@@ -71,4 +71,18 @@ extension SCNView {
         }
         scene?.lightingEnvironment.intensity = intensity
     }
+
+    func updateLightingEnvironment(for frame: ARFrame) {
+        // If light estimation is enabled, update the intensity of the model's lights and the environment map
+        let intensity: CGFloat
+        if let lightEstimate = frame.lightEstimate {
+            intensity = lightEstimate.ambientIntensity / 400
+        } else {
+            intensity = 2
+        }
+        DispatchQueue.main.async(execute: {
+            self.enableEnvironmentMapWithIntensity(intensity)
+        })
+    }
 }
+

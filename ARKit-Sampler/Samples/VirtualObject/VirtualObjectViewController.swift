@@ -41,16 +41,7 @@ class VirtualObjectViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         guard let frame = sceneView.session.currentFrame else {return}
-        DispatchQueue.main.async(execute: {
-            // If light estimation is enabled, update the intensity of the model's lights and the environment map
-            let intensity: CGFloat
-            if let lightEstimate = frame.lightEstimate {
-                intensity = lightEstimate.ambientIntensity / 400
-            } else {
-                intensity = 2
-            }
-            self.sceneView.enableEnvironmentMapWithIntensity(intensity)
-        })
+        sceneView.updateLightingEnvironment(for: frame)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
