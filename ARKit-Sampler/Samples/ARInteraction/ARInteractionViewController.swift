@@ -98,22 +98,29 @@ class ARInteractionViewController: UIViewController, ARSCNViewDelegate, ARSessio
         let hitTestOptions = [SCNHitTestOption: Any]()
         let results: [SCNHitTestResult] = sceneView.hitTest(pos, options: hitTestOptions)
 
-        // Search if a virtual object node corresponding to the hit node exists
         for anchor in anchors {
             // a node corresponding to the anchor
             guard let node = sceneView.node(for: anchor) else {continue}
-            for child in node.childNodes {
-                guard let virtualNode = child as? VirtualObjectNode else {continue}
-                for result in results {
-                    for virtualChild in virtualNode.childNodes {
-                        guard virtualChild == result.node else {continue}
-                        virtualNode.react()
-                        return true
-                    }
+            
+            // Search a virtual object node which has a hit node
+            guard let hitVirtualNode = searchHitVirtualObjectNode(under: node, results: results) else {continue}
+
+            hitVirtualNode.react()
+        }
+        return false
+    }
+    
+    private func searchHitVirtualObjectNode(under node: SCNNode, results: [SCNHitTestResult]) -> VirtualObjectNode? {
+        for child in node.childNodes {
+            guard let virtualNode = child as? VirtualObjectNode else {continue}
+            for result in results {
+                for virtualChild in virtualNode.childNodes {
+                    guard virtualChild == result.node else {continue}
+                    return virtualNode
                 }
             }
         }
-        return false
+        return nil
     }
     
     // MARK: - ARSessionObserver
