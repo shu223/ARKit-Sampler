@@ -26,7 +26,6 @@ class PlaneDetectionViewController: UIViewController, ARSCNViewDelegate {
 
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
-        configuration.isLightEstimationEnabled = true
 
         sceneView.session.run(configuration)
     }
@@ -37,35 +36,16 @@ class PlaneDetectionViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
-    private func loadModel() -> SCNNode {
-        guard let scene = SCNScene(named: "duck.scn", inDirectory: "models.scnassets/duck") else {fatalError()}
-        let modelNode = SCNNode()
-        for child in scene.rootNode.childNodes {
-            modelNode.addChildNode(child)
-        }
-        return modelNode
-    }
-    
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        print("\(self.classForCoder)/" + #function)
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeAnchor.addPlaneNode(on: node, color: UIColor.bookYellow)
-
-        let virtualObjectNode = loadModel()
-        DispatchQueue.main.async(execute: {
-            node.addChildNode(virtualObjectNode)
-        })
+        planeAnchor.addPlaneNode(on: node, color: UIColor.arBlue.withAlphaComponent(0.3))
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
         planeAnchor.updatePlaneNode(on: node)
-    }
-    
-    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
-        print("\(self.classForCoder)/" + #function)
     }
 }
 

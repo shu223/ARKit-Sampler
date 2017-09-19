@@ -24,14 +24,19 @@ struct Sample {
 struct SampleDataSource {
     let samples = [
         Sample(
-            title: "Simple",
-            detail: "3 lines AR sample.",
+            title: "3 lines AR",
+            detail: "A simple AR with 3 lines code.",
             classPrefix: "Simple"
         ),
         Sample(
             title: "Plane Detection",
-            detail: "3 lines AR sample.",
+            detail: "A sample to show how simply ARKit can detect planes",
             classPrefix: "PlaneDetection"
+        ),
+        Sample(
+            title: "Virtual Object",
+            detail: "A sample to show how to add a virtual object to a detected plane.",
+            classPrefix: "VirtualObject"
         ),
         ]
 }
