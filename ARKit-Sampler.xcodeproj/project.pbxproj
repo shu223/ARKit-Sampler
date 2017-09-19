@@ -26,6 +26,9 @@
 		8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921D21F718E040087C2B0 /* LaunchScreen.storyboard */; };
 		8A8921DC1F7190010087C2B0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921DB1F7190010087C2B0 /* RootViewController.swift */; };
 		8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921DD1F7191370087C2B0 /* SampleDataSource.swift */; };
+		8A9C49BF1F71ACAF00C8CB69 /* ARInteraction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49BC1F71ACAF00C8CB69 /* ARInteraction.storyboard */; };
+		8A9C49C01F71ACAF00C8CB69 /* ARInteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49BD1F71ACAF00C8CB69 /* ARInteractionViewController.swift */; };
+		8A9C49C31F71B12D00C8CB69 /* VirtualObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		8A8921D51F718E040087C2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8921DB1F7190010087C2B0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		8A8921DD1F7191370087C2B0 /* SampleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataSource.swift; sourceTree = "<group>"; };
+		8A9C49BC1F71ACAF00C8CB69 /* ARInteraction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARInteraction.storyboard; sourceTree = "<group>"; };
+		8A9C49BD1F71ACAF00C8CB69 /* ARInteractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARInteractionViewController.swift; sourceTree = "<group>"; };
+		8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +72,10 @@
 		8A086D951F71967800951ABF /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				8A086D981F7196A300951ABF /* SimpleViewController.swift */,
-				8A086D961F71968C00951ABF /* Simple.storyboard */,
-				8A086DA51F719C2600951ABF /* PlaneDetectionViewController.swift */,
-				8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */,
-				8A086DA91F71A08900951ABF /* VirtualObjectViewController.swift */,
-				8A086DAA1F71A08900951ABF /* VirtualObject.storyboard */,
+				8A9C49B71F71AC6600C8CB69 /* Simple */,
+				8A9C49B81F71AC7F00C8CB69 /* PlaneDetection */,
+				8A9C49BA1F71AC9100C8CB69 /* VirtualObject */,
+				8A9C49BB1F71ACAF00C8CB69 /* ARInteraction */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -83,6 +87,7 @@
 				8A086D9D1F7198D900951ABF /* ARPlaneAnchor+Visualize.swift */,
 				8A086D9F1F7198D900951ABF /* SceneKitUtils.swift */,
 				8A086DA01F7198D900951ABF /* TrackingState+Description.swift */,
+				8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -120,6 +125,42 @@
 				8A086D951F71967800951ABF /* Samples */,
 			);
 			path = "ARKit-Sampler";
+			sourceTree = "<group>";
+		};
+		8A9C49B71F71AC6600C8CB69 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				8A086D981F7196A300951ABF /* SimpleViewController.swift */,
+				8A086D961F71968C00951ABF /* Simple.storyboard */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
+		8A9C49B81F71AC7F00C8CB69 /* PlaneDetection */ = {
+			isa = PBXGroup;
+			children = (
+				8A086DA51F719C2600951ABF /* PlaneDetectionViewController.swift */,
+				8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */,
+			);
+			path = PlaneDetection;
+			sourceTree = "<group>";
+		};
+		8A9C49BA1F71AC9100C8CB69 /* VirtualObject */ = {
+			isa = PBXGroup;
+			children = (
+				8A086DA91F71A08900951ABF /* VirtualObjectViewController.swift */,
+				8A086DAA1F71A08900951ABF /* VirtualObject.storyboard */,
+			);
+			path = VirtualObject;
+			sourceTree = "<group>";
+		};
+		8A9C49BB1F71ACAF00C8CB69 /* ARInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C49BD1F71ACAF00C8CB69 /* ARInteractionViewController.swift */,
+				8A9C49BC1F71ACAF00C8CB69 /* ARInteraction.storyboard */,
+			);
+			path = ARInteraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +224,7 @@
 			files = (
 				8A086DAC1F71A08900951ABF /* VirtualObject.storyboard in Resources */,
 				8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */,
+				8A9C49BF1F71ACAF00C8CB69 /* ARInteraction.storyboard in Resources */,
 				8A8921D11F718E040087C2B0 /* Assets.xcassets in Resources */,
 				8A086D971F71968C00951ABF /* Simple.storyboard in Resources */,
 				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
@@ -208,7 +250,9 @@
 				8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */,
 				8A086DA21F7198D900951ABF /* Common.swift in Sources */,
 				8A8921DC1F7190010087C2B0 /* RootViewController.swift in Sources */,
+				8A9C49C01F71ACAF00C8CB69 /* ARInteractionViewController.swift in Sources */,
 				8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */,
+				8A9C49C31F71B12D00C8CB69 /* VirtualObjectNode.swift in Sources */,
 				8A086DA41F7198D900951ABF /* TrackingState+Description.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

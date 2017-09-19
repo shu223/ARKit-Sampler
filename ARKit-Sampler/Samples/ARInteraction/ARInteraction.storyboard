@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Interaction View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ARInteractionViewController" customModule="ARKit_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPU-jo-y2c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-HX-9Kx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exr-Do-ZSl">
+                                <rect key="frame" x="8" y="36" width="359" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="exr-Do-ZSl" secondAttribute="trailing" constant="8" id="1Y6-gZ-KBp"/>
+                            <constraint firstItem="exr-Do-ZSl" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" constant="16" id="5cZ-Mi-SyN"/>
+                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="bottom" secondItem="HLL-HX-9Kx" secondAttribute="bottom" id="IV8-NB-qZt"/>
+                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="HLL-HX-9Kx" secondAttribute="trailing" id="MAM-EQ-AYv"/>
+                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" id="SUk-d9-2no"/>
+                            <constraint firstItem="exr-Do-ZSl" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="8" id="adm-hR-WSj"/>
+                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" id="das-2I-MxV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YFY-Vv-2jf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="HLL-HX-9Kx" id="K8B-4z-W6K"/>
+                        <outlet property="trackingStateLabel" destination="exr-Do-ZSl" id="BsH-br-heh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

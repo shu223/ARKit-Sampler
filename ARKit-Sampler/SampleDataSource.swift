@@ -38,5 +38,10 @@ struct SampleDataSource {
             detail: "A sample to show how to add a virtual object to a detected plane.",
             classPrefix: "VirtualObject"
         ),
+        Sample(
+            title: "AR Interaction",
+            detail: "Interact with virtual objects or detected plane anchors.",
+            classPrefix: "ARInteraction"
+        ),
         ]
 }
