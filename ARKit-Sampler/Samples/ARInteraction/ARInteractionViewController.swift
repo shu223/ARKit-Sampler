@@ -27,8 +27,7 @@ class ARInteractionViewController: UIViewController, ARSCNViewDelegate, ARSessio
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
-        configuration.isLightEstimationEnabled = true
-        
+        configuration.isLightEstimationEnabled = true        
         sceneView.session.run(configuration)
     }
     

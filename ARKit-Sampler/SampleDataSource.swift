@@ -48,5 +48,10 @@ struct SampleDataSource {
             detail: "Measure a length between 2 points in the real space.",
             classPrefix: "ARMeasure"
         ),
+        Sample(
+            title: "AR Drawing",
+            detail: "Drawing in the real space.",
+            classPrefix: "ARDrawing"
+        ),
         ]
 }

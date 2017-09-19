@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F5AA0984FD0409AEB73AC4E /* Pods_ARKit_Sampler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */; };
 		8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D931F71941C00951ABF /* RootViewCell.swift */; };
 		8A086D971F71968C00951ABF /* Simple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A086D961F71968C00951ABF /* Simple.storyboard */; };
 		8A086D991F7196A300951ABF /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086D981F7196A300951ABF /* SimpleViewController.swift */; };
@@ -31,9 +32,14 @@
 		8A9C49C31F71B12D00C8CB69 /* VirtualObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */; };
 		8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49C51F71B99900C8CB69 /* ARMeasure.storyboard */; };
 		8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49C61F71B99900C8CB69 /* ARMeasureViewController.swift */; };
+		8A9C49CD1F71BF0500C8CB69 /* ARDrawing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49CA1F71BF0500C8CB69 /* ARDrawing.storyboard */; };
+		8A9C49CE1F71BF0500C8CB69 /* ARDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49CB1F71BF0500C8CB69 /* ARDrawingViewController.swift */; };
+		8A9C49CF1F71BF0500C8CB69 /* DynamicGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49CC1F71BF0500C8CB69 /* DynamicGeometry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.debug.xcconfig"; sourceTree = "<group>"; };
+		7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKit_Sampler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A086D931F71941C00951ABF /* RootViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewCell.swift; sourceTree = "<group>"; };
 		8A086D961F71968C00951ABF /* Simple.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Simple.storyboard; sourceTree = "<group>"; };
 		8A086D981F7196A300951ABF /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,10 @@
 		8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectNode.swift; sourceTree = "<group>"; };
 		8A9C49C51F71B99900C8CB69 /* ARMeasure.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARMeasure.storyboard; sourceTree = "<group>"; };
 		8A9C49C61F71B99900C8CB69 /* ARMeasureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMeasureViewController.swift; sourceTree = "<group>"; };
+		8A9C49CA1F71BF0500C8CB69 /* ARDrawing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARDrawing.storyboard; sourceTree = "<group>"; };
+		8A9C49CB1F71BF0500C8CB69 /* ARDrawingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDrawingViewController.swift; sourceTree = "<group>"; };
+		8A9C49CC1F71BF0500C8CB69 /* DynamicGeometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicGeometry.swift; sourceTree = "<group>"; };
+		8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +77,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5AA0984FD0409AEB73AC4E /* Pods_ARKit_Sampler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		297F2017A339FCD6D3645863 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B6FA6DDC58BD46FBC840EC1 /* Pods_ARKit_Sampler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38046705730D58ABBFA12F52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */,
+				8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8A086D951F71967800951ABF /* Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,7 @@
 				8A9C49BA1F71AC9100C8CB69 /* VirtualObject */,
 				8A9C49BB1F71ACAF00C8CB69 /* ARInteraction */,
 				8A9C49C41F71B99900C8CB69 /* ARMeasure */,
+				8A9C49C91F71BF0500C8CB69 /* ARDrawing */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -104,6 +133,8 @@
 				8A086D9A1F7197F600951ABF /* models.scnassets */,
 				8A8921C81F718E040087C2B0 /* ARKit-Sampler */,
 				8A8921C71F718E040087C2B0 /* Products */,
+				38046705730D58ABBFA12F52 /* Pods */,
+				297F2017A339FCD6D3645863 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +208,16 @@
 			path = ARMeasure;
 			sourceTree = "<group>";
 		};
+		8A9C49C91F71BF0500C8CB69 /* ARDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C49CB1F71BF0500C8CB69 /* ARDrawingViewController.swift */,
+				8A9C49CA1F71BF0500C8CB69 /* ARDrawing.storyboard */,
+				8A9C49CC1F71BF0500C8CB69 /* DynamicGeometry.swift */,
+			);
+			path = ARDrawing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A8921D81F718E040087C2B0 /* Build configuration list for PBXNativeTarget "ARKit-Sampler" */;
 			buildPhases = (
+				F0102A004559E363A8723412 /* [CP] Check Pods Manifest.lock */,
 				8A8921C21F718E040087C2B0 /* Sources */,
 				8A8921C31F718E040087C2B0 /* Frameworks */,
 				8A8921C41F718E040087C2B0 /* Resources */,
+				3BE237804945FD9F9FF71C87 /* [CP] Embed Pods Frameworks */,
+				A9D92332B236CD5478FE9F70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,6 +284,7 @@
 				8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */,
 				8A9C49BF1F71ACAF00C8CB69 /* ARInteraction.storyboard in Resources */,
 				8A8921D11F718E040087C2B0 /* Assets.xcassets in Resources */,
+				8A9C49CD1F71BF0500C8CB69 /* ARDrawing.storyboard in Resources */,
 				8A086D971F71968C00951ABF /* Simple.storyboard in Resources */,
 				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
 				8A086D9B1F7197F700951ABF /* models.scnassets in Resources */,
@@ -249,6 +294,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BE237804945FD9F9FF71C87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ColorSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9D92332B236CD5478FE9F70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0102A004559E363A8723412 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARKit-Sampler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A8921C21F718E040087C2B0 /* Sources */ = {
@@ -261,7 +360,9 @@
 				8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
 				8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */,
+				8A9C49CE1F71BF0500C8CB69 /* ARDrawingViewController.swift in Sources */,
 				8A086D991F7196A300951ABF /* SimpleViewController.swift in Sources */,
+				8A9C49CF1F71BF0500C8CB69 /* DynamicGeometry.swift in Sources */,
 				8A086DA71F719C2600951ABF /* PlaneDetectionViewController.swift in Sources */,
 				8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */,
 				8A086DA21F7198D900951ABF /* Common.swift in Sources */,
@@ -404,6 +505,7 @@
 		};
 		8A8921D91F718E040087C2B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F13E8C5860DBEF1BD063CF8 /* Pods-ARKit-Sampler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +521,7 @@
 		};
 		8A8921DA1F718E040087C2B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

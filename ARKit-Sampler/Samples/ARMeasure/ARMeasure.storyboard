@@ -28,10 +28,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4J-vc-twd">
-                                <rect key="frame" x="309" y="617" width="50" height="30"/>
+                                <rect key="frame" x="289" y="597" width="70" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="e1t-RL-khA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="e1t-RL-khA"/>
+                                    <constraint firstAttribute="height" constant="50" id="y0F-6D-P86"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetBtnTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YnP-Io-WJu"/>
