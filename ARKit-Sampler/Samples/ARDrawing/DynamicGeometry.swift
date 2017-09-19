@@ -50,7 +50,7 @@ open class DynamicGeometryNode: SCNNode {
     
     private func updateGeometryIfNeeded() {
         guard vertices.count >= 3 else {
-            print("not enough vertices")
+//            print("not enough vertices")
             return
         }
         
