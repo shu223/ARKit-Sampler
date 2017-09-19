@@ -53,5 +53,10 @@ struct SampleDataSource {
             detail: "Drawing in the real space.",
             classPrefix: "ARDrawing"
         ),
+        Sample(
+            title: "Core ML + ARKit",
+            detail: "AR Tagging to detected objects using Core ML.",
+            classPrefix: "ARObjectDetection"
+        ),
         ]
 }
