@@ -39,6 +39,11 @@
 		8A9C49D51F71C5D900C8CB69 /* ARObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49D21F71C5D900C8CB69 /* ARObjectDetectionViewController.swift */; };
 		8A9C49D61F71C5D900C8CB69 /* TagNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49D31F71C5D900C8CB69 /* TagNode.swift */; };
 		8A9C49D91F71C65B00C8CB69 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49D81F71C65B00C8CB69 /* Inceptionv3.mlmodel */; };
+		8A9C49E11F71CD0D00C8CB69 /* ARMetal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49DB1F71CD0D00C8CB69 /* ARMetal.storyboard */; };
+		8A9C49E21F71CD0D00C8CB69 /* ARMetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49DC1F71CD0D00C8CB69 /* ARMetalViewController.swift */; };
+		8A9C49E41F71CD0D00C8CB69 /* CVPixelBuffer+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49DF1F71CD0D00C8CB69 /* CVPixelBuffer+Metal.swift */; };
+		8A9C49E51F71CD0D00C8CB69 /* MetalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49E01F71CD0D00C8CB69 /* MetalImageView.swift */; };
+		8A9C49E71F71CEC600C8CB69 /* SampleShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49E61F71CEC600C8CB69 /* SampleShaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +82,11 @@
 		8A9C49D21F71C5D900C8CB69 /* ARObjectDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARObjectDetectionViewController.swift; sourceTree = "<group>"; };
 		8A9C49D31F71C5D900C8CB69 /* TagNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagNode.swift; sourceTree = "<group>"; };
 		8A9C49D81F71C65B00C8CB69 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		8A9C49DB1F71CD0D00C8CB69 /* ARMetal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARMetal.storyboard; sourceTree = "<group>"; };
+		8A9C49DC1F71CD0D00C8CB69 /* ARMetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMetalViewController.swift; sourceTree = "<group>"; };
+		8A9C49DF1F71CD0D00C8CB69 /* CVPixelBuffer+Metal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Metal.swift"; sourceTree = "<group>"; };
+		8A9C49E01F71CD0D00C8CB69 /* MetalImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalImageView.swift; sourceTree = "<group>"; };
+		8A9C49E61F71CEC600C8CB69 /* SampleShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = SampleShaders.metal; sourceTree = "<group>"; };
 		8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +129,7 @@
 				8A9C49C41F71B99900C8CB69 /* ARMeasure */,
 				8A9C49C91F71BF0500C8CB69 /* ARDrawing */,
 				8A9C49D01F71C5D900C8CB69 /* ARObjectDetection */,
+				8A9C49DA1F71CD0D00C8CB69 /* ARMetal */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -246,6 +257,26 @@
 			path = mlmodels;
 			sourceTree = "<group>";
 		};
+		8A9C49DA1F71CD0D00C8CB69 /* ARMetal */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C49E61F71CEC600C8CB69 /* SampleShaders.metal */,
+				8A9C49DC1F71CD0D00C8CB69 /* ARMetalViewController.swift */,
+				8A9C49DB1F71CD0D00C8CB69 /* ARMetal.storyboard */,
+				8A9C49DE1F71CD0D00C8CB69 /* MetalImageView */,
+			);
+			path = ARMetal;
+			sourceTree = "<group>";
+		};
+		8A9C49DE1F71CD0D00C8CB69 /* MetalImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8A9C49DF1F71CD0D00C8CB69 /* CVPixelBuffer+Metal.swift */,
+				8A9C49E01F71CD0D00C8CB69 /* MetalImageView.swift */,
+			);
+			path = MetalImageView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,6 +350,7 @@
 				8A086D9B1F7197F700951ABF /* models.scnassets in Resources */,
 				8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */,
 				8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */,
+				8A9C49E11F71CD0D00C8CB69 /* ARMetal.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +423,7 @@
 				8A9C49D91F71C65B00C8CB69 /* Inceptionv3.mlmodel in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
 				8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */,
+				8A9C49E71F71CEC600C8CB69 /* SampleShaders.metal in Sources */,
 				8A9C49CE1F71BF0500C8CB69 /* ARDrawingViewController.swift in Sources */,
 				8A086D991F7196A300951ABF /* SimpleViewController.swift in Sources */,
 				8A9C49CF1F71BF0500C8CB69 /* DynamicGeometry.swift in Sources */,
@@ -398,9 +431,12 @@
 				8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */,
 				8A9C49D61F71C5D900C8CB69 /* TagNode.swift in Sources */,
 				8A086DA21F7198D900951ABF /* Common.swift in Sources */,
+				8A9C49E51F71CD0D00C8CB69 /* MetalImageView.swift in Sources */,
 				8A8921DC1F7190010087C2B0 /* RootViewController.swift in Sources */,
 				8A9C49C01F71ACAF00C8CB69 /* ARInteractionViewController.swift in Sources */,
 				8A086D941F71941C00951ABF /* RootViewCell.swift in Sources */,
+				8A9C49E21F71CD0D00C8CB69 /* ARMetalViewController.swift in Sources */,
+				8A9C49E41F71CD0D00C8CB69 /* CVPixelBuffer+Metal.swift in Sources */,
 				8A9C49C31F71B12D00C8CB69 /* VirtualObjectNode.swift in Sources */,
 				8A086DA41F7198D900951ABF /* TrackingState+Description.swift in Sources */,
 			);

@@ -58,5 +58,10 @@ struct SampleDataSource {
             detail: "AR Tagging to detected objects using Core ML.",
             classPrefix: "ARObjectDetection"
         ),
+        Sample(
+            title: "Metal + ARKit",
+            detail: "Rendering with Metal",
+            classPrefix: "ARMetal"
+        ),
         ]
 }
