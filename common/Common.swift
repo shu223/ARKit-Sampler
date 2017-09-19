@@ -17,6 +17,15 @@ extension UIColor {
     }
 }
 
+extension ARSession {
+    func run() {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        configuration.isLightEstimationEnabled = true
+        run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+}
+
 extension SCNNode {
     
     class func sphereNode(color: UIColor) -> SCNNode {

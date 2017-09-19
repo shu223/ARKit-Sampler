@@ -46,8 +46,7 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        startRunning()
+        sceneView.session.run()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,13 +55,6 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // MARK: - Private
-    
-    private func startRunning() {
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-        configuration.isLightEstimationEnabled = true
-        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-    }
     
     private func reset() {
     }
@@ -154,6 +146,6 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
 
     @IBAction func resetBtnTapped(_ sender: UIButton) {
         reset()
-        startRunning()
+        sceneView.session.run()
     }
 }
