@@ -48,6 +48,7 @@ A sample to show how to add a virtual object to a detected plane.
 
 Interactions with virtual objects or detected plane anchors.
 
+![](README_resources/interaction2.gif)
 
 ### AR Measure
 
