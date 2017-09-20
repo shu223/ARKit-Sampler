@@ -101,13 +101,3 @@ iOS programmer from Japan.
 ## Special Thanks
 
 The icon is designed by [Okazu](https://www.facebook.com/pashimo)
-
-
-## [AD] iOS 11 Programming (Japanese)
-
-<img src="README_resources/project002_cover.jpg" width="300">
-
-https://peaks.cc/iOS11
-
-- 話題のARKit, Core MLなどの新フレームワーク、Swift 4, Xcode 9の新機能、Drag and DropなどUIKitの新機能、AutoLayout関連アップデート, Metal 2, HomeKit, Core NFC, PDFKit, SiriKit, MusicKit, AirPlay 2 などなどiOS 11の主要トピックを網羅する解説書
-- **ARKit, Metalの章の執筆を担当**しています
