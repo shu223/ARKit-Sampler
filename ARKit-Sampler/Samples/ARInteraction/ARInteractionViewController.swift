@@ -99,8 +99,9 @@ class ARInteractionViewController: UIViewController, ARSCNViewDelegate, ARSessio
             
             // Search a virtual object node which has a hit node
             guard let hitVirtualNode = searchHitVirtualObjectNode(under: node, results: results) else {continue}
-
             hitVirtualNode.react()
+            
+            return true
         }
         return false
     }
