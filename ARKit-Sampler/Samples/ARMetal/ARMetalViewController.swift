@@ -97,10 +97,10 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        print("anchor:\(anchor), node: \(node), node geometry: \(String(describing: node.geometry))")
+//        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
+//        print("anchor:\(anchor), node: \(node), node geometry: \(String(describing: node.geometry))")
         
-        let geometry = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+        let geometry = SCNPlane(width: CGFloat(1), height: CGFloat(1.6))
         geometry.materials.first?.diffuse.contents = UIColor.black
 
         DispatchQueue.main.async(execute: {
@@ -129,12 +129,6 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
         print("\(self.classForCoder)/" + #function)
     }
 
-    // MARK: - ARSessionObserver
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        print("\(self.classForCoder)/\(#function), error: " + error.localizedDescription)
-    }
-    
     // MARK: - ARSessionObserver
     
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
