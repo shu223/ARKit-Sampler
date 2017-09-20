@@ -1,5 +1,7 @@
 ### https://raw.github.com/github/gitignore/3cb9446b178379ee9911cfa268cbf72767a745bc/Swift.gitignore
 
+mlmodels/
+
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
