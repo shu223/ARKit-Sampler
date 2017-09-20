@@ -70,9 +70,15 @@ AR Tagging to detected objects using Core ML.
 <img src="README_resources/coreml.png" width="200">
 
 
+### Metal + ARKit
+
+Rendering with Metal.
+
+<img src="README_resources/arkitmetal2.png" width="200">
+
+
 ### Coming soon...
 
-- Drawing with Metal
 - Audio + ARKit
 - Core Location / MapKit + ARKit
 - Face Tracking
