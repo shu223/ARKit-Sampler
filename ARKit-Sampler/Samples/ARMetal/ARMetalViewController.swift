@@ -35,7 +35,7 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         
         guard let library = device.makeDefaultLibrary() else {fatalError()}
-        metalView.applyShaders(library: library, vertexFunctionName: "textureRendererVertex", fragmentFunctionName: "myFragment1")
+        metalView.applyShaders(library: library, vertexFunctionName: "vertexShader", fragmentFunctionName: "fragmentShader")
         
         sceneView.delegate = self
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
