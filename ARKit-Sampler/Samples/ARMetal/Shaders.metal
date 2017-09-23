@@ -10,27 +10,27 @@
 using namespace metal;
 
 
-struct SimpleVertex
+struct Vertex
 {
     float4 position [[position]];
     float2 texCoords;
 };
 
-vertex SimpleVertex vertexShader(const device float4* positions           [[ buffer(0) ]],
-                                 const device float2* texture_coordinates [[ buffer(1) ]],
-                                 const uint           vid                 [[ vertex_id ]])
+vertex Vertex vertexShader(const device float4* positions [[buffer(0)]],
+                           const device float2* texCoords [[buffer(1)]],
+                           const uint           vid       [[vertex_id]])
 {
-    SimpleVertex vert;
+    Vertex vert;
     vert.position = positions[vid];
-    vert.texCoords = texture_coordinates[vid];
+    vert.texCoords = texCoords[vid];
     return vert;
 }
 
 // based on: https://www.shadertoy.com/view/MsX3DN
-fragment float4 fragmentShader(SimpleVertex in [[stage_in]],
-                            constant float &time [[buffer(0)]],
-                            texture2d<float>  snapshot_texture     [[ texture(0) ]],
-                            texture2d<float>  camera_texture   [[ texture(1) ]])
+fragment float4 fragmentShader(Vertex           in               [[stage_in]],
+                               constant float   &time            [[buffer(0)]],
+                               texture2d<float> snapshot_texture [[texture(0)]],
+                               texture2d<float> camera_texture   [[texture(1)]])
 {
     constexpr sampler colorSampler;
 
