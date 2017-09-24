@@ -8,27 +8,11 @@
 import MetalKit
 import MetalPerformanceShaders
 
-let vertexData: [Float] =
-[
-        -1, -1, 0, 1,
-        1, -1, 0, 1,
-        -1,  1, 0, 1,
-        1,  1, 0, 1
-]
-
-let textureCoordinateData: [Float] =
-[
-    0, 1,
-    1, 1,
-    0, 0,
-    1, 0
-]
-
 class MetalImageView: MTKView, MTKViewDelegate {
 
     private var commandQueue: MTLCommandQueue!
 
-    private var textureLoader: MTKTextureLoader!
+    internal var textureLoader: MTKTextureLoader!
     var texture: MTLTexture? {
         didSet {
             if let texture = texture {
@@ -45,40 +29,53 @@ class MetalImageView: MTKView, MTKViewDelegate {
     private var lanczos: MPSImageLanczosScale!
     var transformedTexture: MTLTexture? // TODO: only get for external
     
+    private let vertexData: [Float] = [
+            -1, -1, 0, 1,
+            1, -1, 0, 1,
+            -1,  1, 0, 1,
+            1,  1, 0, 1
+    ]
+    private lazy var vertexBuffer: MTLBuffer? = {
+        let size = vertexData.count * MemoryLayout<Float>.size
+        return makeBuffer(bytes: vertexData, length: size)
+    }()
 
-    // FIXME: temporary implementation
-    private var vertexBuffer: MTLBuffer?
-    private var texCoordBuffer: MTLBuffer?
-    private var timeBuffer: MTLBuffer?
+    private let textureCoordinateData: [Float] = [
+            0, 1,
+            1, 1,
+            0, 0,
+            1, 0
+    ]
+    private lazy var texCoordBuffer: MTLBuffer? = {
+        let size = textureCoordinateData.count * MemoryLayout<Float>.size
+        return makeBuffer(bytes: textureCoordinateData, length: size)
+    }()
+
+    // additional textures to pass to the fragment shader
+    var additionalTextures: [MTLTexture] = []
+    // additional buffers to pass to the fragment shader
+    var additionalBuffers: [MTLBuffer] = []
+    
+    private var renderDescriptor: MTLRenderPipelineDescriptor?
     private var renderPipeline: MTLRenderPipelineState?
-    var secondTexture: MTLTexture?
-    var time: Float? {
-        didSet {
-            if let time = time, let timeBuffer = timeBuffer {
-                let pTimeData = timeBuffer.contents()
-                let vTimeData = pTimeData.bindMemory(to: Float.self, capacity: 1 / MemoryLayout<Float>.stride)
-                vTimeData[0] = time
-            }
-        }
+
+    func makeBuffer(bytes: UnsafeRawPointer, length: Int) -> MTLBuffer {
+        guard let device = device else {fatalError()}
+        return device.makeBuffer(bytes: bytes, length: length, options: [])!
     }
 
-    func applyShaders(library: MTLLibrary, vertexFunctionName: String, fragmentFunctionName: String) {
-        guard let device = device else {fatalError()}
-        if vertexBuffer == nil {
-            let size = vertexData.count * MemoryLayout<Float>.size
-            vertexBuffer = device.makeBuffer(bytes: vertexData, length: size, options: [])
-        }
-        if texCoordBuffer == nil {
-            let size = textureCoordinateData.count * MemoryLayout<Float>.size
-            texCoordBuffer = device.makeBuffer(bytes: textureCoordinateData, length: size, options: [])
-        }
-        if timeBuffer == nil {
-            timeBuffer = device.makeBuffer(bytes: &time, length: MemoryLayout<Float>.size, options: [])
-        }
-        let descriptor = MTLRenderPipelineDescriptor()
+    func registerShaders(library: MTLLibrary, vertexFunctionName: String, fragmentFunctionName: String) {
+        renderDescriptor = MTLRenderPipelineDescriptor()
+        guard let descriptor = renderDescriptor else {return}
         descriptor.vertexFunction = library.makeFunction(name: vertexFunctionName)
         descriptor.fragmentFunction = library.makeFunction(name: fragmentFunctionName)
-        descriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
+    }
+
+    private func makePipelineIfNeeded() {
+        guard let texture = texture else {return}
+        guard let descriptor = renderDescriptor else {return}
+        guard let device = device else {fatalError()}
+        descriptor.colorAttachments[0].pixelFormat = texture.pixelFormat
         renderPipeline = try? device.makeRenderPipelineState(descriptor: descriptor)
     }
     
@@ -92,12 +89,17 @@ class MetalImageView: MTKView, MTKViewDelegate {
         renderEncoder.setRenderPipelineState(renderPipeline)
         renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         renderEncoder.setVertexBuffer(texCoordBuffer, offset: 0, index: 1)
+
         renderEncoder.setFragmentTexture(texture, index: 0)
-        if let secondTexture = secondTexture {
-            renderEncoder.setFragmentTexture(secondTexture, index: 1)
+        var textureIndex = 1
+        for additionalTex in additionalTextures {
+            renderEncoder.setFragmentTexture(additionalTex, index: textureIndex)
+            textureIndex += 1
         }
-        if time != nil {
-            renderEncoder.setFragmentBuffer(timeBuffer, offset: 0, index: 0)
+        var bufferIndex = 0
+        for additionalBuf in additionalBuffers {
+            renderEncoder.setFragmentBuffer(additionalBuf, offset: 0, index: bufferIndex)
+            bufferIndex += 1
         }
 
         renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
@@ -174,7 +176,7 @@ class MetalImageView: MTKView, MTKViewDelegate {
         guard let transformedTexture = transformedTexture else {return}
         guard let commandBuffer = commandQueue.makeCommandBuffer() else {fatalError()}
 
-
+        makePipelineIfNeeded()
         if renderPipeline != nil {
             encodeShaders(commandBuffer: commandBuffer)
         } else {

@@ -31,7 +31,7 @@
                                     <action selector="resetBtnTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YnP-Io-WJu"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-eB-KZU" customClass="MetalImageView" customModule="ARKit_Sampler" customModuleProvider="target">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuM-eB-KZU" customClass="ARMetalImageView" customModule="ARKit_Sampler" customModuleProvider="target">
                                 <rect key="frame" x="-0.5" y="19.5" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>

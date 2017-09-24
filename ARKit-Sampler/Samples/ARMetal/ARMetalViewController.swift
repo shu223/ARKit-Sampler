@@ -13,30 +13,17 @@ import MetalKit
 
 class ARMetalViewController: UIViewController, ARSCNViewDelegate {
     
-    private let device = MTLCreateSystemDefaultDevice()!
-    private let commandQueue: MTLCommandQueue
-    private let textureLoader: MTKTextureLoader
-
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var resetBtn: UIButton!
 
-    @IBOutlet weak var metalView: MetalImageView!
+    @IBOutlet weak var metalView: ARMetalImageView!
     
     private var planeNode: SCNNode?
-
-    required init?(coder aDecoder: NSCoder) {
-        commandQueue = device.makeCommandQueue()!
-        textureLoader = MTKTextureLoader(device: device)
-        super.init(coder: aDecoder)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        guard let library = device.makeDefaultLibrary() else {fatalError()}
-        metalView.applyShaders(library: library, vertexFunctionName: "vertexShader", fragmentFunctionName: "fragmentShader")
-        
+
         sceneView.delegate = self
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         sceneView.scene = SCNScene()
@@ -82,16 +69,11 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
             image = image.transformed(by: transform)
             
             let context = CIContext(options:nil)
-            guard let cgImage = context.createCGImage(image, from: image.extent) else {return}
-            guard let textureCamera = try? self.textureLoader.newTexture(cgImage: cgImage) else {return}
-            self.metalView.secondTexture = textureCamera
-
+            guard let cameraImage = context.createCGImage(image, from: image.extent) else {return}
+            guard let snapshotImage = self.sceneView.snapshot().cgImage else {return}
+            self.metalView.registerTexturesFor(cameraImage: cameraImage, snapshotImage: snapshotImage)
             self.metalView.time = Float(time)
 
-            guard let snapshotImage = self.sceneView.snapshot().cgImage else {return}
-
-            guard let textureSnapshot = try? self.textureLoader.newTexture(cgImage: snapshotImage) else {return}
-            self.metalView.texture = textureSnapshot
             self.isRendering = false
         })
     }
