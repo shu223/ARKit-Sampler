@@ -75,7 +75,7 @@ AR Tagging to detected objects using Core ML.
 
 Rendering with Metal.
 
-<img src="README_resources/arkitmetal2.png" width="200">
+![](README_resources/arkitmetal.gif)
 
 
 ### Coming soon...
