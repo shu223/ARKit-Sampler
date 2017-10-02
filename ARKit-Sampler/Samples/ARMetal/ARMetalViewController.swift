@@ -19,8 +19,6 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var metalView: ARMetalImageView!
     
-    private var planeNode: SCNNode?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,29 +80,23 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
 //        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
 //        print("anchor:\(anchor), node: \(node), node geometry: \(String(describing: node.geometry))")
         
-        let geometry = SCNPlane(width: CGFloat(1), height: CGFloat(1.6))
-        geometry.materials.first?.diffuse.contents = UIColor.black
+        let virtualNode = VirtualObjectNode()
 
-        DispatchQueue.main.async(execute: {
-            if let planeNode = self.planeNode {
-                planeNode.removeFromParentNode()
+        for child in virtualNode.childNodes {
+            if let material = child.geometry?.firstMaterial {
+                material.diffuse.contents = UIColor.black
             }
-            
-            self.planeNode = SCNNode(geometry: geometry)
-            guard let planeNode = self.planeNode else {fatalError()}
-            
-            // add the plane on the root node at the same position with the anchor node.
-            self.sceneView.scene.rootNode.addChildNode(planeNode)
-            planeNode.position = node.position
+        }
+        virtualNode.scale = SCNVector3Make(2, 2, 2)
+        
+        DispatchQueue.main.async(execute: {
+            node.addChildNode(virtualNode)
         })
     }
 
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        DispatchQueue.main.async(execute: {
-            guard let planeNode = self.planeNode else {fatalError()}
-            planeNode.position = node.position
-        })
+        print("\(self.classForCoder)/" + #function)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
