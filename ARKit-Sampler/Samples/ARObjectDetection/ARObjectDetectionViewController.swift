@@ -140,6 +140,14 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
     }
     
     private func hitTest(_ pos: CGPoint) {
+        let nodeResults = sceneView.hitTest(pos, options: [SCNHitTestOption.boundingBoxOnly: true])
+        for nodeResult in nodeResults {
+            if let overlappingTag = nodeResult.node.parent as? TagNode {
+                // The tags seem overlapping, so let's replace with new one
+                removeTag(tag: overlappingTag)
+            }
+        }
+        
         let results1 = sceneView.hitTest(pos, types: [.existingPlaneUsingExtent, .estimatedHorizontalPlane])
         if let result = results1.first {
             addTag(for: result)
@@ -159,14 +167,18 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
         tagNode.classificationObservation = latestResult
         sceneView.scene.rootNode.addChildNode(tagNode)
     }
+
+    private func removeTag(tag: TagNode) {
+        tag.removeFromParentNode()
+        guard let index = tags.index(of: tag) else {return}
+        tags.remove(at: index)
+    }
     
     private func reset() {
         for child in sceneView.scene.rootNode.childNodes {
             if child is TagNode {
                 guard let tag = child as? TagNode else {fatalError()}
-                tag.removeFromParentNode()
-                guard let index = tags.index(of: tag) else {continue}
-                tags.remove(at: index)
+                removeTag(tag: tag)
             }
         }
     }
