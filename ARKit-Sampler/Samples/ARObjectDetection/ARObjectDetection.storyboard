@@ -34,6 +34,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-Bz-NwX">
+                                <rect key="frame" x="307" y="603" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="LVO-p0-QbE"/>
+                                    <constraint firstAttribute="height" constant="44" id="vcT-Li-el9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetBtnTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="IPM-Rm-5mN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -45,7 +57,9 @@
                             <constraint firstItem="HLL-HX-9Kx" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" id="SUk-d9-2no"/>
                             <constraint firstItem="exr-Do-ZSl" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="8" id="adm-hR-WSj"/>
                             <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" id="das-2I-MxV"/>
+                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="yRY-Bz-NwX" secondAttribute="trailing" constant="8" id="hMQ-qM-i95"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="ZFp-85-ij6" secondAttribute="trailing" constant="8" id="qNc-Se-7OW"/>
+                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="bottom" secondItem="yRY-Bz-NwX" secondAttribute="bottom" constant="20" id="uB1-eN-vTn"/>
                             <constraint firstItem="ZFp-85-ij6" firstAttribute="top" secondItem="exr-Do-ZSl" secondAttribute="bottom" constant="8" id="xLa-x7-VMu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YFY-Vv-2jf"/>

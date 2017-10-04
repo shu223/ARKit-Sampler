@@ -160,6 +160,17 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(tagNode)
     }
     
+    private func reset() {
+        for child in sceneView.scene.rootNode.childNodes {
+            if child is TagNode {
+                guard let tag = child as? TagNode else {fatalError()}
+                tag.removeFromParentNode()
+                guard let index = tags.index(of: tag) else {continue}
+                tags.remove(at: index)
+            }
+        }
+    }
+
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
@@ -171,6 +182,12 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         print("trackingState: \(camera.trackingState)")
         trackingStateLabel.text = camera.trackingState.description
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func resetBtnTapped(_ sender: UIButton) {
+        reset()
     }
 }
 
