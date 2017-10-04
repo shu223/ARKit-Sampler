@@ -25,7 +25,8 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var trackingStateLabel: UILabel!
-    
+    @IBOutlet var mlStateLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +40,8 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         sceneView.session.run()
+        
+        mlStateLabel.text = nil
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -59,8 +62,11 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
                 self.isPerformingCoreML = false
                 return
             }
-//            print("best: \(best.identifier)")
-            
+//            print("best: ")
+            DispatchQueue.main.async(execute: {
+                self.mlStateLabel.text = "\(best.identifier) \(best.confidence * 100)"
+            })
+
             // don't tag when the result is enough confident
             if best.confidence < 0.5 {
                 self.isPerformingCoreML = false

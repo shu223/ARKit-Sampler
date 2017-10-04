@@ -27,20 +27,31 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFp-85-ij6">
+                                <rect key="frame" x="8" y="64" width="359" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="exr-Do-ZSl" secondAttribute="trailing" constant="8" id="1Y6-gZ-KBp"/>
+                            <constraint firstItem="ZFp-85-ij6" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="8" id="30Q-TZ-aM2"/>
                             <constraint firstItem="exr-Do-ZSl" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" constant="16" id="5cZ-Mi-SyN"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="bottom" secondItem="HLL-HX-9Kx" secondAttribute="bottom" id="IV8-NB-qZt"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="HLL-HX-9Kx" secondAttribute="trailing" id="MAM-EQ-AYv"/>
                             <constraint firstItem="HLL-HX-9Kx" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" id="SUk-d9-2no"/>
                             <constraint firstItem="exr-Do-ZSl" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="8" id="adm-hR-WSj"/>
                             <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" id="das-2I-MxV"/>
+                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="ZFp-85-ij6" secondAttribute="trailing" constant="8" id="qNc-Se-7OW"/>
+                            <constraint firstItem="ZFp-85-ij6" firstAttribute="top" secondItem="exr-Do-ZSl" secondAttribute="bottom" constant="8" id="xLa-x7-VMu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YFY-Vv-2jf"/>
                     </view>
                     <connections>
+                        <outlet property="mlStateLabel" destination="ZFp-85-ij6" id="yLZ-z3-PXL"/>
                         <outlet property="sceneView" destination="HLL-HX-9Kx" id="K8B-4z-W6K"/>
                         <outlet property="trackingStateLabel" destination="exr-Do-ZSl" id="BsH-br-heh"/>
                     </connections>
