@@ -68,7 +68,7 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
             })
 
             // don't tag when the result is enough confident
-            if best.confidence < 0.5 {
+            if best.confidence < 0.3 {
                 self.isPerformingCoreML = false
                 return
             }
