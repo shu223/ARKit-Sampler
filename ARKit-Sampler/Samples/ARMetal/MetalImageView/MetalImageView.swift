@@ -59,54 +59,6 @@ class MetalImageView: MTKView, MTKViewDelegate {
     private var renderDescriptor: MTLRenderPipelineDescriptor?
     private var renderPipeline: MTLRenderPipelineState?
 
-    func makeBuffer(bytes: UnsafeRawPointer, length: Int) -> MTLBuffer {
-        guard let device = device else {fatalError()}
-        return device.makeBuffer(bytes: bytes, length: length, options: [])!
-    }
-
-    func registerShaders(library: MTLLibrary, vertexFunctionName: String, fragmentFunctionName: String) {
-        renderDescriptor = MTLRenderPipelineDescriptor()
-        guard let descriptor = renderDescriptor else {return}
-        descriptor.vertexFunction = library.makeFunction(name: vertexFunctionName)
-        descriptor.fragmentFunction = library.makeFunction(name: fragmentFunctionName)
-    }
-
-    private func makePipelineIfNeeded() {
-        guard let texture = texture else {return}
-        guard let descriptor = renderDescriptor else {return}
-        guard let device = device else {fatalError()}
-        descriptor.colorAttachments[0].pixelFormat = texture.pixelFormat
-        renderPipeline = try? device.makeRenderPipelineState(descriptor: descriptor)
-    }
-    
-    private func encodeShaders(commandBuffer: MTLCommandBuffer) {
-        guard let renderPipeline = renderPipeline else {fatalError()}
-        guard let renderPassDescriptor = currentRenderPassDescriptor else {return}
-        renderPassDescriptor.colorAttachments[0].storeAction = .store
-        
-        guard let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) else {return}
-
-        renderEncoder.setRenderPipelineState(renderPipeline)
-        renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        renderEncoder.setVertexBuffer(texCoordBuffer, offset: 0, index: 1)
-
-        renderEncoder.setFragmentTexture(texture, index: 0)
-        var textureIndex = 1
-        for additionalTex in additionalTextures {
-            renderEncoder.setFragmentTexture(additionalTex, index: textureIndex)
-            textureIndex += 1
-        }
-        var bufferIndex = 0
-        for additionalBuf in additionalBuffers {
-            renderEncoder.setFragmentBuffer(additionalBuf, offset: 0, index: bufferIndex)
-            bufferIndex += 1
-        }
-
-        renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
-        renderEncoder.endEncoding()
-    }
-
-
     // =========================================================================
     // MARK: - Initialization
     
@@ -162,6 +114,53 @@ class MetalImageView: MTKView, MTKViewDelegate {
         }
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
+    }
+    
+    func makeBuffer(bytes: UnsafeRawPointer, length: Int) -> MTLBuffer {
+        guard let device = device else {fatalError()}
+        return device.makeBuffer(bytes: bytes, length: length, options: [])!
+    }
+    
+    func registerShaders(library: MTLLibrary, vertexFunctionName: String, fragmentFunctionName: String) {
+        renderDescriptor = MTLRenderPipelineDescriptor()
+        guard let descriptor = renderDescriptor else {return}
+        descriptor.vertexFunction = library.makeFunction(name: vertexFunctionName)
+        descriptor.fragmentFunction = library.makeFunction(name: fragmentFunctionName)
+    }
+    
+    private func makePipelineIfNeeded() {
+        guard let texture = texture else {return}
+        guard let descriptor = renderDescriptor else {return}
+        guard let device = device else {fatalError()}
+        descriptor.colorAttachments[0].pixelFormat = texture.pixelFormat
+        renderPipeline = try? device.makeRenderPipelineState(descriptor: descriptor)
+    }
+    
+    private func encodeShaders(commandBuffer: MTLCommandBuffer) {
+        guard let renderPipeline = renderPipeline else {fatalError()}
+        guard let renderPassDescriptor = currentRenderPassDescriptor else {return}
+        renderPassDescriptor.colorAttachments[0].storeAction = .store
+        
+        guard let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) else {return}
+        
+        renderEncoder.setRenderPipelineState(renderPipeline)
+        renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+        renderEncoder.setVertexBuffer(texCoordBuffer, offset: 0, index: 1)
+        
+        renderEncoder.setFragmentTexture(texture, index: 0)
+        var textureIndex = 1
+        for additionalTex in additionalTextures {
+            renderEncoder.setFragmentTexture(additionalTex, index: textureIndex)
+            textureIndex += 1
+        }
+        var bufferIndex = 0
+        for additionalBuf in additionalBuffers {
+            renderEncoder.setFragmentBuffer(additionalBuf, offset: 0, index: bufferIndex)
+            bufferIndex += 1
+        }
+        
+        renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
+        renderEncoder.endEncoding()
     }
     
     // =========================================================================
