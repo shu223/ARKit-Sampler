@@ -10,27 +10,27 @@
 using namespace metal;
 
 
-struct Vertex
+struct ColorInOut
 {
     float4 position [[position]];
     float2 texCoords;
 };
 
-vertex Vertex vertexShader(const device float4* positions [[buffer(0)]],
-                           const device float2* texCoords [[buffer(1)]],
-                           const uint           vid       [[vertex_id]])
+vertex ColorInOut vertexShader(const device float4* positions [[ buffer(0) ]],
+                               const device float2* texCoords [[ buffer(1) ]],
+                               const uint           vid       [[ vertex_id ]])
 {
-    Vertex vert;
-    vert.position = positions[vid];
-    vert.texCoords = texCoords[vid];
-    return vert;
+    ColorInOut out;
+    out.position = positions[vid];
+    out.texCoords = texCoords[vid];
+    return out;
 }
 
 // based on: https://www.shadertoy.com/view/MsX3DN
-fragment float4 fragmentShader(Vertex           in               [[stage_in]],
-                               constant float   &time            [[buffer(0)]],
-                               texture2d<float> snapshot_texture [[texture(0)]],
-                               texture2d<float> camera_texture   [[texture(1)]])
+fragment float4 fragmentShader(ColorInOut       in               [[ stage_in ]],
+                               constant float   &time            [[ buffer(0) ]],
+                               texture2d<float> snapshot_texture [[ texture(0) ]],
+                               texture2d<float> camera_texture   [[ texture(1) ]])
 {
     constexpr sampler colorSampler;
 
