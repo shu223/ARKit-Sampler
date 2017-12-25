@@ -13,17 +13,26 @@ class ARFaceSimpleViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var trackingStateLabel: UILabel!
     
+    private var faceNode: ARFaceNode?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sceneView.session.run()
+
+        guard ARFaceTrackingConfiguration.isSupported, let device = sceneView.device else {
+            navigationController?.popViewController(animated: true)
+            return;
+        }
+        faceNode = ARFaceNode(device: device)
+        
+        sceneView.session.run(ARFaceTrackingConfiguration(), options: [.resetTracking, .removeExistingAnchors])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -33,25 +42,31 @@ class ARFaceSimpleViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // MARK: - ARSCNViewDelegate
-    
-    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-        guard let frame = sceneView.session.currentFrame else {return}
-        sceneView.updateLightingEnvironment(for: frame)
-    }
-    
+        
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
-        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeAnchor.addPlaneNode(on: node, color: UIColor.arBlue.withAlphaComponent(0.3))
+        guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}
+        guard let faceNode = faceNode else {fatalError()}
+
+        faceNode.removeFromParentNode()
+        node.addChildNode(faceNode)
+        
+        faceNode.update(with: faceAnchor)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeAnchor.updatePlaneNode(on: node)
+        guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}
+        guard let faceNode = faceNode else {fatalError()}
+        
+        faceNode.update(with: faceAnchor)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
+        guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}
+        guard let faceNode = faceNode else {fatalError()}
+        
+        faceNode.removeFromParentNode()
     }
     
     // MARK: - ARSessionObserver
