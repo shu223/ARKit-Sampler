@@ -63,5 +63,10 @@ struct SampleDataSource {
             detail: "Rendering with Metal",
             classPrefix: "ARMetal"
         ),
+        Sample(
+            title: "Simple Face Tracking",
+            detail: "Simple Face Tracking",
+            classPrefix: "ARFaceSimple"
+        ),
         ]
 }

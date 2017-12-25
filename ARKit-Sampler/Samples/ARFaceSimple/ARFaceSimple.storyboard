@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7i1-Gx-o2U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Face Simple View Controller-->
+        <scene sceneID="vjo-vb-fze">
+            <objects>
+                <viewController id="7i1-Gx-o2U" customClass="ARFaceSimpleViewController" customModule="ARKit_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="52n-SS-D5C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KF4-rX-iXj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-tg-vAb">
+                                <rect key="frame" x="8" y="20" width="359" height="20.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vIB-tg-vAb" firstAttribute="leading" secondItem="70K-ds-9aV" secondAttribute="leading" constant="8" id="ExC-1L-dwO"/>
+                            <constraint firstItem="70K-ds-9aV" firstAttribute="trailing" secondItem="vIB-tg-vAb" secondAttribute="trailing" constant="8" id="Vp2-fi-j3Z"/>
+                            <constraint firstItem="vIB-tg-vAb" firstAttribute="top" secondItem="70K-ds-9aV" secondAttribute="top" id="WzF-z7-GEE"/>
+                            <constraint firstItem="KF4-rX-iXj" firstAttribute="top" secondItem="52n-SS-D5C" secondAttribute="top" id="fnj-YV-4lC"/>
+                            <constraint firstAttribute="trailing" secondItem="KF4-rX-iXj" secondAttribute="trailing" id="fuT-rO-WWN"/>
+                            <constraint firstItem="KF4-rX-iXj" firstAttribute="leading" secondItem="52n-SS-D5C" secondAttribute="leading" id="hAn-et-boA"/>
+                            <constraint firstAttribute="bottom" secondItem="KF4-rX-iXj" secondAttribute="bottom" id="lro-c5-Es2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="70K-ds-9aV"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="KF4-rX-iXj" id="8se-YK-V9u"/>
+                        <outlet property="trackingStateLabel" destination="vIB-tg-vAb" id="pNd-2S-HuI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1F8-8E-huA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="-146"/>
+        </scene>
+    </scenes>
+</document>
