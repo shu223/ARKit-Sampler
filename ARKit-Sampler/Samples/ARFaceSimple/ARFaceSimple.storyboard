@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-tg-vAb">
-                                <rect key="frame" x="8" y="20" width="359" height="20.5"/>
+                                <rect key="frame" x="8" y="40" width="359" height="20.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,7 +32,7 @@
                         <constraints>
                             <constraint firstItem="vIB-tg-vAb" firstAttribute="leading" secondItem="70K-ds-9aV" secondAttribute="leading" constant="8" id="ExC-1L-dwO"/>
                             <constraint firstItem="70K-ds-9aV" firstAttribute="trailing" secondItem="vIB-tg-vAb" secondAttribute="trailing" constant="8" id="Vp2-fi-j3Z"/>
-                            <constraint firstItem="vIB-tg-vAb" firstAttribute="top" secondItem="70K-ds-9aV" secondAttribute="top" id="WzF-z7-GEE"/>
+                            <constraint firstItem="vIB-tg-vAb" firstAttribute="top" secondItem="70K-ds-9aV" secondAttribute="top" constant="20" id="WzF-z7-GEE"/>
                             <constraint firstItem="KF4-rX-iXj" firstAttribute="top" secondItem="52n-SS-D5C" secondAttribute="top" id="fnj-YV-4lC"/>
                             <constraint firstAttribute="trailing" secondItem="KF4-rX-iXj" secondAttribute="trailing" id="fuT-rO-WWN"/>
                             <constraint firstItem="KF4-rX-iXj" firstAttribute="leading" secondItem="52n-SS-D5C" secondAttribute="leading" id="hAn-et-boA"/>

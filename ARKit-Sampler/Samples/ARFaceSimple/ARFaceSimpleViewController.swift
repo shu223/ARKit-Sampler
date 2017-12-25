@@ -13,20 +13,20 @@ class ARFaceSimpleViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var trackingStateLabel: UILabel!
     
-    private var faceNode: ARFaceNode?
+    private var faceNode: ARFaceNode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         guard ARFaceTrackingConfiguration.isSupported, let device = sceneView.device else {
+            print("ARFaceTrackingConfiguration is not supported on this device!")
             navigationController?.popViewController(animated: true)
             return;
         }
@@ -46,7 +46,6 @@ class ARFaceSimpleViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
         guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}
-        guard let faceNode = faceNode else {fatalError()}
 
         faceNode.removeFromParentNode()
         node.addChildNode(faceNode)
@@ -56,15 +55,12 @@ class ARFaceSimpleViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}
-        guard let faceNode = faceNode else {fatalError()}
         
         faceNode.update(with: faceAnchor)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
-        guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}
-        guard let faceNode = faceNode else {fatalError()}
         
         faceNode.removeFromParentNode()
     }

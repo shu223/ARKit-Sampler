@@ -65,7 +65,7 @@ struct SampleDataSource {
         ),
         Sample(
             title: "Simple Face Tracking",
-            detail: "Simple Face Tracking",
+            detail: "Simplest Face-Based AR implementation.",
             classPrefix: "ARFaceSimple"
         ),
         ]
