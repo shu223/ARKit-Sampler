@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,12 +52,12 @@
                             <constraint firstItem="7QC-8l-xqi" firstAttribute="top" secondItem="Jo6-ja-fOH" secondAttribute="bottom" constant="8" id="00d-RZ-9zl"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="Jo6-ja-fOH" secondAttribute="trailing" constant="8" id="6hr-Xh-Pzj"/>
                             <constraint firstItem="Jo6-ja-fOH" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="8" id="Acl-zv-6go"/>
-                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="bottom" secondItem="HLL-HX-9Kx" secondAttribute="bottom" id="IV8-NB-qZt"/>
+                            <constraint firstAttribute="bottom" secondItem="HLL-HX-9Kx" secondAttribute="bottom" id="IV8-NB-qZt"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="y4J-vc-twd" secondAttribute="trailing" constant="16" id="Jhi-ae-Qg9"/>
-                            <constraint firstItem="YFY-Vv-2jf" firstAttribute="trailing" secondItem="HLL-HX-9Kx" secondAttribute="trailing" id="MAM-EQ-AYv"/>
-                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" id="SUk-d9-2no"/>
+                            <constraint firstAttribute="trailing" secondItem="HLL-HX-9Kx" secondAttribute="trailing" id="MAM-EQ-AYv"/>
+                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="leading" secondItem="gPU-jo-y2c" secondAttribute="leading" id="SUk-d9-2no"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="bottom" secondItem="y4J-vc-twd" secondAttribute="bottom" constant="20" id="an4-pK-FeA"/>
-                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" id="das-2I-MxV"/>
+                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="gPU-jo-y2c" secondAttribute="top" constant="20" id="das-2I-MxV"/>
                             <constraint firstItem="7QC-8l-xqi" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="8" id="dpj-db-Vih"/>
                             <constraint firstItem="y4J-vc-twd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gPU-jo-y2c" secondAttribute="leading" constant="20" symbolic="YES" id="kzS-ek-op1"/>
                             <constraint firstItem="Jo6-ja-fOH" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" constant="20" id="lIJ-2h-RYh"/>
