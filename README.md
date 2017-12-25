@@ -78,11 +78,15 @@ Rendering with Metal.
 ![](README_resources/arkitmetal.gif)
 
 
+### Simple Face Tracking
+
+Simplest Face-Based AR implementation.
+
+
 ### Coming soon...
 
 - Audio + ARKit
 - Core Location / MapKit + ARKit
-- Face Tracking
 - etc...
 
 
