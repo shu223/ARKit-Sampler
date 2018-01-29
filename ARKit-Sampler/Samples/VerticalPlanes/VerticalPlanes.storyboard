@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ohq-Lz-hCN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vertical Planes View Controller-->
+        <scene sceneID="TkW-By-uMo">
+            <objects>
+                <viewController id="Ohq-Lz-hCN" customClass="VerticalPlanesViewController" customModule="ARKit_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxo-ik-qGY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMD-gE-Vpf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mMD-gE-Vpf" firstAttribute="leading" secondItem="sxo-ik-qGY" secondAttribute="leading" id="0ds-SM-6z7"/>
+                            <constraint firstItem="mMD-gE-Vpf" firstAttribute="top" secondItem="sxo-ik-qGY" secondAttribute="top" id="edP-Fb-NII"/>
+                            <constraint firstAttribute="trailing" secondItem="mMD-gE-Vpf" secondAttribute="trailing" id="ika-UM-yPt"/>
+                            <constraint firstAttribute="bottom" secondItem="mMD-gE-Vpf" secondAttribute="bottom" id="yfj-1v-aA0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y3O-gm-dUE"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="mMD-gE-Vpf" id="NAR-GU-eWZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS2-T7-Ts9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="207"/>
+        </scene>
+    </scenes>
+</document>

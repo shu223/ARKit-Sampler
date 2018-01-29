@@ -50,6 +50,8 @@
 		8ADD3E791FF16CE500D988BD /* ARFaceSimple.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADD3E771FF16CE500D988BD /* ARFaceSimple.storyboard */; };
 		8ADD3E7A1FF16CE500D988BD /* ARFaceSimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD3E781FF16CE500D988BD /* ARFaceSimpleViewController.swift */; };
 		8ADD3E7E1FF175AC00D988BD /* ARFaceNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD3E7D1FF175AC00D988BD /* ARFaceNode.swift */; };
+		8AEDCA3E201F7BE200C56AF7 /* VerticalPlanesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEDCA3D201F7BE100C56AF7 /* VerticalPlanesViewController.swift */; };
+		8AEDCA40201F7BFE00C56AF7 /* VerticalPlanes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AEDCA3F201F7BFE00C56AF7 /* VerticalPlanes.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,8 @@
 		8ADD3E771FF16CE500D988BD /* ARFaceSimple.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARFaceSimple.storyboard; sourceTree = "<group>"; };
 		8ADD3E781FF16CE500D988BD /* ARFaceSimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARFaceSimpleViewController.swift; sourceTree = "<group>"; };
 		8ADD3E7D1FF175AC00D988BD /* ARFaceNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceNode.swift; sourceTree = "<group>"; };
+		8AEDCA3D201F7BE100C56AF7 /* VerticalPlanesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalPlanesViewController.swift; sourceTree = "<group>"; };
+		8AEDCA3F201F7BFE00C56AF7 /* VerticalPlanes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerticalPlanes.storyboard; sourceTree = "<group>"; };
 		8FBAFB21E706B4A02B0EA992 /* Pods-ARKit-Sampler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKit-Sampler.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 				8A9C49DA1F71CD0D00C8CB69 /* ARMetal */,
 				8A430D2F2020D11E00B646D3 /* ARSCNProgram */,
 				8ADD3E761FF16CE500D988BD /* ARFaceSimple */,
+				8AEDCA3C201F7BE100C56AF7 /* VerticalPlanes */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -311,6 +316,15 @@
 			path = ARFaceSimple;
 			sourceTree = "<group>";
 		};
+		8AEDCA3C201F7BE100C56AF7 /* VerticalPlanes */ = {
+			isa = PBXGroup;
+			children = (
+				8AEDCA3D201F7BE100C56AF7 /* VerticalPlanesViewController.swift */,
+				8AEDCA3F201F7BFE00C56AF7 /* VerticalPlanes.storyboard */,
+			);
+			path = VerticalPlanes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,6 +399,7 @@
 				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
 				8A086D9B1F7197F700951ABF /* models.scnassets in Resources */,
 				8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */,
+				8AEDCA40201F7BFE00C56AF7 /* VerticalPlanes.storyboard in Resources */,
 				8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */,
 				8A9C49E11F71CD0D00C8CB69 /* ARMetal.storyboard in Resources */,
 			);
@@ -459,6 +474,7 @@
 				8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */,
 				8A9C49D91F71C65B00C8CB69 /* Inceptionv3.mlmodel in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
+				8AEDCA3E201F7BE200C56AF7 /* VerticalPlanesViewController.swift in Sources */,
 				8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */,
 				8ADD3E7E1FF175AC00D988BD /* ARFaceNode.swift in Sources */,
 				8A9C49E71F71CEC600C8CB69 /* Shaders.metal in Sources */,
@@ -619,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "ARKit-Sampler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.ARKit-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -635,6 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Z86A4AWDE;
 				INFOPLIST_FILE = "ARKit-Sampler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.ARKit-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";

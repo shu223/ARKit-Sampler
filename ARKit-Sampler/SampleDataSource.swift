@@ -73,5 +73,10 @@ struct SampleDataSource {
             detail: "Simplest Face-Based AR implementation.",
             classPrefix: "ARFaceSimple"
         ),
+        Sample(
+            title: "Vertical Plane Detection",
+            detail: "A sample to show how to detect vertical planes with ARKit 1.5",
+            classPrefix: "VerticalPlanes"
+        ),
         ]
 }
