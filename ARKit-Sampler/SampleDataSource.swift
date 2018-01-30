@@ -65,7 +65,7 @@ struct SampleDataSource {
         ),
         Sample(
             title: "Metal + ARKit (SCNProgram)",
-            detail: "Rendering with Metal using SCNProgram",
+            detail: "Rendering the virtual node's material with Metal shader using SCNProgram.",
             classPrefix: "ARSCNProgram"
         ),
         Sample(

@@ -78,6 +78,12 @@ Rendering with Metal.
 ![](README_resources/arkitmetal.gif)
 
 
+### Metal + ARKit (SCNProgram)
+
+Rendering the virtual node's material with Metal shader using `SCNProgram`.
+
+<img src="README_resources/arscnprogram.png" width="200">
+
 ### Simple Face Tracking
 
 Simplest Face-Based AR implementation.
