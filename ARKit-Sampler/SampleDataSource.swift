@@ -64,6 +64,11 @@ struct SampleDataSource {
             classPrefix: "ARMetal"
         ),
         Sample(
+            title: "Metal + ARKit (SCNProgram)",
+            detail: "Rendering with Metal using SCNProgram",
+            classPrefix: "ARSCNProgram"
+        ),
+        Sample(
             title: "Simple Face Tracking",
             detail: "Simplest Face-Based AR implementation.",
             classPrefix: "ARFaceSimple"

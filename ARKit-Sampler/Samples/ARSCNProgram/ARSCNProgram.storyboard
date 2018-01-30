@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14087.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iZo-Ks-cLp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14075.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Program View Controller-->
+        <scene sceneID="YOh-rm-LWY">
+            <objects>
+                <viewController id="iZo-Ks-cLp" customClass="ARSCNProgramViewController" customModule="ARKit_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pDr-gx-Tkw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-vp-SKw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kEH-vp-SKw" secondAttribute="trailing" id="28P-Gv-9J5"/>
+                            <constraint firstItem="kEH-vp-SKw" firstAttribute="top" secondItem="pDr-gx-Tkw" secondAttribute="topMargin" id="6TZ-3P-uog"/>
+                            <constraint firstItem="kEH-vp-SKw" firstAttribute="leading" secondItem="pDr-gx-Tkw" secondAttribute="leading" id="QWh-VY-hsy"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="kEH-vp-SKw" secondAttribute="bottom" id="axa-y8-kKd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="soC-WO-MZq"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="kEH-vp-SKw" id="WhE-MX-dDt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ax7-42-B4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-38" y="69"/>
+        </scene>
+    </scenes>
+</document>
