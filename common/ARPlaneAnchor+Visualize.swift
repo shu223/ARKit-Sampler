@@ -10,10 +10,15 @@ import ARKit
 
 extension ARPlaneAnchor {
     
-    func addPlaneNode(on node: SCNNode, color: UIColor) {
-        
+    func addPlaneNode(on node: SCNNode, contents: Any) {
         let geometry = SCNPlane(width: CGFloat(extent.x), height: CGFloat(extent.z))
-        geometry.materials.first?.diffuse.contents = color
+        guard let material = geometry.materials.first else {fatalError()}
+        
+        if let program = contents as? SCNProgram {
+            material.program = program
+        } else {
+            material.diffuse.contents = contents
+        }
 
         let planeNode = SCNNode(geometry: geometry)
         planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2.0, 1, 0, 0)
@@ -23,20 +28,23 @@ extension ARPlaneAnchor {
         })
     }
     
+    func findPlaneNode(on node: SCNNode) -> SCNNode? {
+        for childNode in node.childNodes {
+            if childNode.geometry as? SCNPlane != nil {
+                return childNode
+            }
+        }
+        return nil
+    }
+
     func updatePlaneNode(on node: SCNNode) {
         
         DispatchQueue.main.async(execute: {
-            for childNode in node.childNodes {
-                guard let plane = childNode.geometry as? SCNPlane else {continue}
-                guard !PlaneSizeEqualToExtent(plane: plane, extent: self.extent) else {continue}
-
-//                print("current plane size: (\(plane.width), \(plane.height))")
-                plane.width = CGFloat(self.extent.x)
-                plane.height = CGFloat(self.extent.z)
-//                print("updated plane size: (\(plane.width), \(plane.height))")
-                
-                break
-            }
+            guard let plane = self.findPlaneNode(on: node)?.geometry as? SCNPlane else {return}
+            guard !PlaneSizeEqualToExtent(plane: plane, extent: self.extent) else {return}
+            
+            plane.width = CGFloat(self.extent.x)
+            plane.height = CGFloat(self.extent.z)
         })
     }
 }

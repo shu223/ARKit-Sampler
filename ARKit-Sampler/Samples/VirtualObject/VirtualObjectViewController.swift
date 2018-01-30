@@ -41,7 +41,7 @@ class VirtualObjectViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeAnchor.addPlaneNode(on: node, color: UIColor.arBlue.withAlphaComponent(0.3))
+        planeAnchor.addPlaneNode(on: node, contents: UIColor.arBlue.withAlphaComponent(0.3))
 
         let virtualNode = VirtualObjectNode()
         DispatchQueue.main.async(execute: {
