@@ -42,16 +42,18 @@ class ARSCNProgramViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // MARK: - ARSCNViewDelegate
-    
+
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         guard let currentFrame = sceneView.session.currentFrame else {return}
         for anchor in currentFrame.anchors {
             guard let planeAnchor = anchor as? ARPlaneAnchor else {continue}
             guard let node = sceneView.node(for: planeAnchor) else {continue}
-            
-            let planeNode = planeAnchor.findPlaneNode(on: node)
-            guard let material = planeNode?.geometry?.firstMaterial else {return}
-            updateTime(time, for: material)
+
+            DispatchQueue.main.async(execute: {
+                let planeNode = planeAnchor.findPlaneNode(on: node)
+                guard let material = planeNode?.geometry?.firstMaterial else {return}
+                self.updateTime(time, for: material)
+            })
         }
     }
     
@@ -62,7 +64,7 @@ class ARSCNProgramViewController: UIViewController, ARSCNViewDelegate {
         let program = SCNProgram()
         program.vertexFunctionName = "scnVertexShader"
         program.fragmentFunctionName = "scnFragmentShader"
-        
+
         planeAnchor.addPlaneNode(on: node, contents: program)
     }
     
