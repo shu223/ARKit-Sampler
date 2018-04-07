@@ -44,6 +44,7 @@ class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
         print("\(self.classForCoder)/" + #function + ", anchor id: \(anchor.identifier)")
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
         let planeGeometry = ARSCNPlaneGeometry(device: device)!
+        planeGeometry.update(from: planeAnchor.geometry)
         planeAnchor.addPlaneNode(on: node, geometry: planeGeometry, contents: UIColor.green.withAlphaComponent(0.3))
     }
     
