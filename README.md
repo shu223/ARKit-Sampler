@@ -84,9 +84,24 @@ Rendering the virtual node's material with Metal shader using `SCNProgram`.
 
 <img src="README_resources/arscnprogram.png" width="200">
 
+
 ### Simple Face Tracking
 
 Simplest Face-Based AR implementation.
+
+
+### Vertical Plane Detection
+
+**ARKit 1.5**
+
+A sample to show how to detect vertical planes.
+
+
+### Irregularly-Shaped Plane Detection
+
+**ARKit 1.5**
+
+A sample to show how to detect irregularly shaped surfaces using ARSCNPlaneGeometry and ARPlaneGeometry.
 
 
 ### Coming soon...
