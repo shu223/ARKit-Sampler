@@ -78,5 +78,10 @@ struct SampleDataSource {
             detail: "A sample to show how to detect vertical planes with ARKit 1.5",
             classPrefix: "VerticalPlanes"
         ),
+        Sample(
+            title: "Irregularly-Shaped Plane Detection",
+            detail: "A sample to show how to detect irregularly shaped surfaces with ARKit 1.5",
+            classPrefix: "ShapedPlane"
+        ),
         ]
 }

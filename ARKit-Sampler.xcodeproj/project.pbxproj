@@ -23,6 +23,8 @@
 		8A430D312020D11E00B646D3 /* ARSCNProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */; };
 		8A430D332020D13200B646D3 /* ARSCNProgram.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */; };
 		8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */; };
+		8A783E542078D44B00B3A2D0 /* ShapedPlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */; };
+		8A783E562078D46F00B3A2D0 /* ShapedPlane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */; };
 		8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921C91F718E040087C2B0 /* AppDelegate.swift */; };
 		8A8921CC1F718E040087C2B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921CB1F718E040087C2B0 /* ViewController.swift */; };
 		8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921CD1F718E040087C2B0 /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSCNProgramViewController.swift; sourceTree = "<group>"; };
 		8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSCNProgram.storyboard; sourceTree = "<group>"; };
 		8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ARSCNProgramShader.metal; sourceTree = "<group>"; };
+		8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapedPlaneViewController.swift; sourceTree = "<group>"; };
+		8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapedPlane.storyboard; sourceTree = "<group>"; };
 		8A8921C61F718E040087C2B0 /* ARKit-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARKit-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8921C91F718E040087C2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8921CB1F718E040087C2B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				8A430D2F2020D11E00B646D3 /* ARSCNProgram */,
 				8ADD3E761FF16CE500D988BD /* ARFaceSimple */,
 				8AEDCA3C201F7BE100C56AF7 /* VerticalPlanes */,
+				8A783E522078D44B00B3A2D0 /* ShapedPlane */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -173,6 +178,15 @@
 				8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */,
 			);
 			path = ARSCNProgram;
+			sourceTree = "<group>";
+		};
+		8A783E522078D44B00B3A2D0 /* ShapedPlane */ = {
+			isa = PBXGroup;
+			children = (
+				8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */,
+				8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */,
+			);
+			path = ShapedPlane;
 			sourceTree = "<group>";
 		};
 		8A8921BD1F718E040087C2B0 = {
@@ -398,6 +412,7 @@
 				8A086D971F71968C00951ABF /* Simple.storyboard in Resources */,
 				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
 				8A086D9B1F7197F700951ABF /* models.scnassets in Resources */,
+				8A783E562078D46F00B3A2D0 /* ShapedPlane.storyboard in Resources */,
 				8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */,
 				8AEDCA40201F7BFE00C56AF7 /* VerticalPlanes.storyboard in Resources */,
 				8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */,
@@ -485,6 +500,7 @@
 				8A086DA71F719C2600951ABF /* PlaneDetectionViewController.swift in Sources */,
 				8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */,
 				8A9C49D61F71C5D900C8CB69 /* TagNode.swift in Sources */,
+				8A783E542078D44B00B3A2D0 /* ShapedPlaneViewController.swift in Sources */,
 				8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */,
 				8A086DA21F7198D900951ABF /* Common.swift in Sources */,
 				8A9C49E51F71CD0D00C8CB69 /* MetalImageView.swift in Sources */,
@@ -626,7 +642,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};

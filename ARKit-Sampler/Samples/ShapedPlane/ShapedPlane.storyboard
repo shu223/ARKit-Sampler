@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nbO-Wi-aIQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shaped Plane View Controller-->
+        <scene sceneID="6Nb-7m-3d2">
+            <objects>
+                <viewController id="nbO-Wi-aIQ" customClass="ShapedPlaneViewController" customModule="ARKit_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7T4-d2-LDh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYq-qg-LDy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AYq-qg-LDy" secondAttribute="trailing" id="SZ1-9z-PyF"/>
+                            <constraint firstItem="AYq-qg-LDy" firstAttribute="top" secondItem="7T4-d2-LDh" secondAttribute="top" id="aCy-gQ-ofW"/>
+                            <constraint firstAttribute="bottom" secondItem="AYq-qg-LDy" secondAttribute="bottom" id="ebb-Tn-X5z"/>
+                            <constraint firstItem="AYq-qg-LDy" firstAttribute="leading" secondItem="7T4-d2-LDh" secondAttribute="leading" id="oCx-OV-HwY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KTB-Kk-kh3"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="AYq-qg-LDy" id="EHJ-Kd-h7B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lie-gq-GBL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-71"/>
+        </scene>
+    </scenes>
+</document>
