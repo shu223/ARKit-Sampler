@@ -41,8 +41,27 @@ class ARFaceSimpleViewController: UIViewController, ARSCNViewDelegate {
         sceneView.session.pause()
     }
     
+    
+    private func updateTime(_ time: TimeInterval, for material: SCNMaterial) {
+        var floatTime = Float(time)
+        let timeData = Data(bytes: &floatTime, count: MemoryLayout<Float>.size)
+        material.setValue(timeData, forKey: "time")
+    }
+    
     // MARK: - ARSCNViewDelegate
-        
+    
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        guard let currentFrame = sceneView.session.currentFrame else { return }
+        for anchor in currentFrame.anchors {
+            // update time for ARFaceNode object
+            guard let faceAnchor = anchor as? ARFaceAnchor else { continue }
+            guard let node = sceneView.node(for: faceAnchor) else { continue }
+            guard let faceNode = node.findFaceNode() else { continue }
+            guard let material = faceNode.geometry?.firstMaterial else { return }
+            self.updateTime(time, for: material)
+        }
+    }
+
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
         guard let faceAnchor = anchor as? ARFaceAnchor else {fatalError()}

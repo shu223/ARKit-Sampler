@@ -33,3 +33,14 @@ class ARFaceNode: SCNNode {
         faceGeometry.update(from: faceAnchor.geometry)
     }
 }
+
+extension SCNNode {
+    
+    func findFaceNode() -> ARFaceNode? {
+        for childNode in childNodes {
+            guard let faceNode = childNode as? ARFaceNode else { continue }
+            return faceNode
+        }
+        return nil
+    }
+}
