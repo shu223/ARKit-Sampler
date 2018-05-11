@@ -11,10 +11,14 @@ import ARKit
 class ARFaceNode: SCNNode {
 
     init(device: MTLDevice, color: UIColor = .white) {
+        
+        let program = SCNProgram()
+        program.vertexFunctionName = "scnVertexShader"
+        program.fragmentFunctionName = "scnFragmentShader"
+
         let faceGeometry = ARSCNFaceGeometry(device: device)
         if let material = faceGeometry?.firstMaterial {
-            material.diffuse.contents = color
-            material.lightingModel = .physicallyBased
+            material.program = program
         }
         super.init()
         self.geometry = faceGeometry
