@@ -10,12 +10,15 @@ import ARKit
 
 class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
 
-    private let device = MTLCreateSystemDefaultDevice()!
-    
+    private var planeGeometry: ARSCNPlaneGeometry!
+
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let device = MTLCreateSystemDefaultDevice()!
+        planeGeometry = ARSCNPlaneGeometry(device: device)!
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
@@ -43,7 +46,6 @@ class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function + ", anchor id: \(anchor.identifier)")
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        let planeGeometry = ARSCNPlaneGeometry(device: device)!
         planeGeometry.update(from: planeAnchor.geometry)
         planeAnchor.addPlaneNode(on: node, geometry: planeGeometry, contents: UIColor.green.withAlphaComponent(0.3))
     }
