@@ -52,7 +52,7 @@ class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeAnchor.updatePlaneGeometryNode(on: node)
+        planeGeometry.update(from: planeAnchor.geometry)
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
