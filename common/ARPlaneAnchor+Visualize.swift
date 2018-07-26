@@ -44,6 +44,15 @@ extension ARPlaneAnchor {
         return nil
     }
 
+    func findShapedPlaneNode(on node: SCNNode) -> SCNNode? {
+        for childNode in node.childNodes {
+            if childNode.geometry as? ARSCNPlaneGeometry != nil {
+                return childNode
+            }
+        }
+        return nil
+    }
+
     @available(iOS 11.3, *)
     func findPlaneGeometryNode(on node: SCNNode) -> SCNNode? {
         for childNode in node.childNodes {

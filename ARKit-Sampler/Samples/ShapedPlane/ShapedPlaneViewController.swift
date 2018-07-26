@@ -10,15 +10,12 @@ import ARKit
 
 class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
 
-    private var planeGeometry: ARSCNPlaneGeometry!
-
     @IBOutlet var sceneView: ARSCNView!
-    
+
+    private let device = MTLCreateSystemDefaultDevice()!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let device = MTLCreateSystemDefaultDevice()!
-        planeGeometry = ARSCNPlaneGeometry(device: device)!
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
@@ -46,13 +43,19 @@ class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function + ", anchor id: \(anchor.identifier)")
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
+
+        let planeGeometry = ARSCNPlaneGeometry(device: device)!
         planeGeometry.update(from: planeAnchor.geometry)
-        planeAnchor.addPlaneNode(on: node, geometry: planeGeometry, contents: UIColor.green.withAlphaComponent(0.3))
+        
+        let color = planeAnchor.alignment == .horizontal ? UIColor.arBlue : UIColor.green
+        planeAnchor.addPlaneNode(on: node, geometry: planeGeometry, contents: color.withAlphaComponent(0.3))
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeGeometry.update(from: planeAnchor.geometry)
+        if let planeGeometry = planeAnchor.findShapedPlaneNode(on: node)?.geometry as? ARSCNPlaneGeometry {
+            planeGeometry.update(from: planeAnchor.geometry)
+        }
     }
 
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
