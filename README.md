@@ -106,11 +106,9 @@ A sample to show how to detect irregularly shaped surfaces using ARSCNPlaneGeome
 
 ![](README_resources/irregular.gif)
 
-### Coming soon...
+### usdz
 
-- Audio + ARKit
-- Core Location / MapKit + ARKit
-- etc...
+A sample to show how to use `.usdz` files with ARKit.
 
 
 ## Author
