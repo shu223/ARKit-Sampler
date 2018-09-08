@@ -20,6 +20,9 @@
 		8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */; };
 		8A086DAB1F71A08900951ABF /* VirtualObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A086DA91F71A08900951ABF /* VirtualObjectViewController.swift */; };
 		8A086DAC1F71A08900951ABF /* VirtualObject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A086DAA1F71A08900951ABF /* VirtualObject.storyboard */; };
+		8A189526214350CC00282899 /* wheelbarrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8A189525214350CC00282899 /* wheelbarrow.usdz */; };
+		8A18952A214350D400282899 /* USDZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A189528214350D400282899 /* USDZViewController.swift */; };
+		8A18952B214350D400282899 /* USDZ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A189529214350D400282899 /* USDZ.storyboard */; };
 		8A430D312020D11E00B646D3 /* ARSCNProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */; };
 		8A430D332020D13200B646D3 /* ARSCNProgram.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */; };
 		8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */; };
@@ -71,6 +74,9 @@
 		8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaneDetection.storyboard; sourceTree = "<group>"; };
 		8A086DA91F71A08900951ABF /* VirtualObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectViewController.swift; sourceTree = "<group>"; };
 		8A086DAA1F71A08900951ABF /* VirtualObject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VirtualObject.storyboard; sourceTree = "<group>"; };
+		8A189525214350CC00282899 /* wheelbarrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = wheelbarrow.usdz; sourceTree = "<group>"; };
+		8A189528214350D400282899 /* USDZViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USDZViewController.swift; sourceTree = "<group>"; };
+		8A189529214350D400282899 /* USDZ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = USDZ.storyboard; sourceTree = "<group>"; };
 		8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSCNProgramViewController.swift; sourceTree = "<group>"; };
 		8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSCNProgram.storyboard; sourceTree = "<group>"; };
 		8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ARSCNProgramShader.metal; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				8ADD3E761FF16CE500D988BD /* ARFaceSimple */,
 				8AEDCA3C201F7BE100C56AF7 /* VerticalPlanes */,
 				8A783E522078D44B00B3A2D0 /* ShapedPlane */,
+				8A189527214350D400282899 /* USDZ */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -168,6 +175,23 @@
 				8A9C49C21F71B12D00C8CB69 /* VirtualObjectNode.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		8A189524214350CC00282899 /* usdz */ = {
+			isa = PBXGroup;
+			children = (
+				8A189525214350CC00282899 /* wheelbarrow.usdz */,
+			);
+			path = usdz;
+			sourceTree = "<group>";
+		};
+		8A189527214350D400282899 /* USDZ */ = {
+			isa = PBXGroup;
+			children = (
+				8A189528214350D400282899 /* USDZViewController.swift */,
+				8A189529214350D400282899 /* USDZ.storyboard */,
+			);
+			path = USDZ;
 			sourceTree = "<group>";
 		};
 		8A430D2F2020D11E00B646D3 /* ARSCNProgram */ = {
@@ -192,6 +216,7 @@
 		8A8921BD1F718E040087C2B0 = {
 			isa = PBXGroup;
 			children = (
+				8A189524214350CC00282899 /* usdz */,
 				8A086D9C1F7198D900951ABF /* common */,
 				8A9C49D71F71C65B00C8CB69 /* mlmodels */,
 				8A086D9A1F7197F600951ABF /* models.scnassets */,
@@ -405,6 +430,7 @@
 				8A086DAC1F71A08900951ABF /* VirtualObject.storyboard in Resources */,
 				8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */,
 				8A9C49D41F71C5D900C8CB69 /* ARObjectDetection.storyboard in Resources */,
+				8A18952B214350D400282899 /* USDZ.storyboard in Resources */,
 				8A9C49BF1F71ACAF00C8CB69 /* ARInteraction.storyboard in Resources */,
 				8A8921D11F718E040087C2B0 /* Assets.xcassets in Resources */,
 				8A9C49CD1F71BF0500C8CB69 /* ARDrawing.storyboard in Resources */,
@@ -413,6 +439,7 @@
 				8A086DA81F719C2600951ABF /* PlaneDetection.storyboard in Resources */,
 				8A086D9B1F7197F700951ABF /* models.scnassets in Resources */,
 				8A783E562078D46F00B3A2D0 /* ShapedPlane.storyboard in Resources */,
+				8A189526214350CC00282899 /* wheelbarrow.usdz in Resources */,
 				8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */,
 				8AEDCA40201F7BFE00C56AF7 /* VerticalPlanes.storyboard in Resources */,
 				8A9C49C71F71B99900C8CB69 /* ARMeasure.storyboard in Resources */,
@@ -499,6 +526,7 @@
 				8ADD3E7A1FF16CE500D988BD /* ARFaceSimpleViewController.swift in Sources */,
 				8A086DA71F719C2600951ABF /* PlaneDetectionViewController.swift in Sources */,
 				8A8921DE1F7191370087C2B0 /* SampleDataSource.swift in Sources */,
+				8A18952A214350D400282899 /* USDZViewController.swift in Sources */,
 				8A9C49D61F71C5D900C8CB69 /* TagNode.swift in Sources */,
 				8A783E542078D44B00B3A2D0 /* ShapedPlaneViewController.swift in Sources */,
 				8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */,

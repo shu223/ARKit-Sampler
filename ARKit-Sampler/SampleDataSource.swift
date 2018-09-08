@@ -83,5 +83,10 @@ struct SampleDataSource {
             detail: "A sample to show how to detect irregularly shaped surfaces with ARKit 1.5",
             classPrefix: "ShapedPlane"
         ),
+        Sample(
+            title: "USDZ",
+            detail: "A sample to show how to use `.usdz` files with ARKit",
+            classPrefix: "USDZ"
+        ),
         ]
 }

@@ -8,6 +8,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import SceneKit.ModelIO
 
 extension UIColor {
     class var arBlue: UIColor {
@@ -73,8 +74,18 @@ extension SCNNode {
         return node
     }
 
-    func loadDuck() {
-        guard let scene = SCNScene(named: "duck.scn", inDirectory: "models.scnassets/duck") else {fatalError()}
+    func loadScn(name: String, inDirectory directory: String) {
+        guard let scene = SCNScene(named: "\(name).scn", inDirectory: directory) else { fatalError() }
+        for child in scene.rootNode.childNodes {
+            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
+            addChildNode(child)
+        }
+    }
+    
+    func loadUsdz(name: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "usdz") else { fatalError() }
+        let mdlAsset = MDLAsset(url: url)
+        let scene = SCNScene(mdlAsset: mdlAsset)
         for child in scene.rootNode.childNodes {
             child.geometry?.firstMaterial?.lightingModel = .physicallyBased
             addChildNode(child)

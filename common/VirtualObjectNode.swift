@@ -10,11 +10,25 @@ import SceneKit
 
 class VirtualObjectNode: SCNNode {
 
-    override init() {
-        super.init()
-        loadDuck()
+    enum VirtualObjectType {
+        case duck
+        case wheelbarrow
     }
     
+    init(type: VirtualObjectType = .duck) {
+        super.init()
+        
+        var scale = 1.0
+        switch type {
+        case .duck:
+            loadScn(name: "duck", inDirectory: "models.scnassets/duck")
+        case .wheelbarrow:
+            loadUsdz(name: "wheelbarrow")
+            scale = 0.01
+        }
+        self.scale = SCNVector3(scale, scale, scale)
+    }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
