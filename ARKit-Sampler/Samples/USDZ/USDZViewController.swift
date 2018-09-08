@@ -49,12 +49,12 @@ extension USDZViewController: ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        print("anchor:\(anchor), node: \(node), node geometry: \(String(describing: node.geometry))")
+        print("\(self.classForCoder)/\(#function) anchor:\(anchor), node: \(node), node geometry: \(String(describing: node.geometry))")
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         guard let planeGeoemtry = ARSCNPlaneGeometry(device: sceneView.device!) else { fatalError() }
-        planeAnchor.addPlaneNode(on: node, geometry: planeGeoemtry, contents: UIColor.yellow.withAlphaComponent(0.3))
+        planeAnchor.addPlaneNode(on: node, geometry: planeGeoemtry, contents: UIColor.yellow.withAlphaComponent(0.1))
         
-        let virtualNode = VirtualObjectNode(type: .wheelbarrow)
+        let virtualNode = VirtualObjectNode(type: .teapot)
         DispatchQueue.main.async(execute: {
             node.addChildNode(virtualNode)
         })

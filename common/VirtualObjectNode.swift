@@ -13,6 +13,7 @@ class VirtualObjectNode: SCNNode {
     enum VirtualObjectType {
         case duck
         case wheelbarrow
+        case teapot
     }
     
     init(type: VirtualObjectType = .duck) {
@@ -24,7 +25,10 @@ class VirtualObjectNode: SCNNode {
             loadScn(name: "duck", inDirectory: "models.scnassets/duck")
         case .wheelbarrow:
             loadUsdz(name: "wheelbarrow")
-            scale = 0.01
+            scale = 0.005
+        case .teapot:
+            loadUsdz(name: "teapot")
+            scale = 0.005
         }
         self.scale = SCNVector3(scale, scale, scale)
     }

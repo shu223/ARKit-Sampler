@@ -84,7 +84,7 @@ struct SampleDataSource {
             classPrefix: "ShapedPlane"
         ),
         Sample(
-            title: "USDZ",
+            title: "usdz",
             detail: "A sample to show how to use `.usdz` files with ARKit",
             classPrefix: "USDZ"
         ),

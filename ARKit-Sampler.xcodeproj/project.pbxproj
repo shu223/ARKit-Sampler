@@ -23,6 +23,7 @@
 		8A189526214350CC00282899 /* wheelbarrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8A189525214350CC00282899 /* wheelbarrow.usdz */; };
 		8A18952A214350D400282899 /* USDZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A189528214350D400282899 /* USDZViewController.swift */; };
 		8A18952B214350D400282899 /* USDZ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A189529214350D400282899 /* USDZ.storyboard */; };
+		8A18952D214355C900282899 /* teapot.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 8A18952C214355C900282899 /* teapot.usdz */; };
 		8A430D312020D11E00B646D3 /* ARSCNProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */; };
 		8A430D332020D13200B646D3 /* ARSCNProgram.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */; };
 		8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */; };
@@ -77,6 +78,7 @@
 		8A189525214350CC00282899 /* wheelbarrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = wheelbarrow.usdz; sourceTree = "<group>"; };
 		8A189528214350D400282899 /* USDZViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USDZViewController.swift; sourceTree = "<group>"; };
 		8A189529214350D400282899 /* USDZ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = USDZ.storyboard; sourceTree = "<group>"; };
+		8A18952C214355C900282899 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = teapot.usdz; sourceTree = "<group>"; };
 		8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSCNProgramViewController.swift; sourceTree = "<group>"; };
 		8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSCNProgram.storyboard; sourceTree = "<group>"; };
 		8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ARSCNProgramShader.metal; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		8A189524214350CC00282899 /* usdz */ = {
 			isa = PBXGroup;
 			children = (
+				8A18952C214355C900282899 /* teapot.usdz */,
 				8A189525214350CC00282899 /* wheelbarrow.usdz */,
 			);
 			path = usdz;
@@ -426,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A18952D214355C900282899 /* teapot.usdz in Resources */,
 				8ADD3E791FF16CE500D988BD /* ARFaceSimple.storyboard in Resources */,
 				8A086DAC1F71A08900951ABF /* VirtualObject.storyboard in Resources */,
 				8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */,

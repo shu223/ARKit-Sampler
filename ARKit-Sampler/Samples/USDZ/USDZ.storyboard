@@ -29,13 +29,9 @@
                                 </constraints>
                                 <state key="normal" title="Reset"/>
                                 <connections>
-                                    <action selector="resetBtnTapped:" destination="1YE-zh-zVh" eventType="touchUpInside" id="Zge-19-Yic"/>
+                                    <action selector="resetBtnTapped:" destination="1YE-zh-zVh" eventType="touchUpInside" id="ALm-Xo-GeF"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0Q-v5-JbL" customClass="ARMetalImageView" customModule="ARKit_Sampler" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yk2-7C-55U">
                                 <rect key="frame" x="16" y="36" width="343" height="19.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,18 +42,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i0Q-v5-JbL" firstAttribute="centerX" secondItem="VDm-R3-L9S" secondAttribute="centerX" id="9GZ-Cd-9bV"/>
                             <constraint firstItem="Yk2-7C-55U" firstAttribute="leading" secondItem="VJd-Gp-qVc" secondAttribute="leading" constant="16" id="9vH-g1-TIX"/>
                             <constraint firstAttribute="bottom" secondItem="VDm-R3-L9S" secondAttribute="bottom" id="EQk-g5-omL"/>
                             <constraint firstItem="HRj-7g-pho" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9t6-HC-BO2" secondAttribute="leading" constant="20" symbolic="YES" id="EiJ-uB-Tsc"/>
                             <constraint firstItem="HRj-7g-pho" firstAttribute="top" secondItem="Yk2-7C-55U" secondAttribute="bottom" constant="8" id="Erb-E6-SEY"/>
-                            <constraint firstItem="i0Q-v5-JbL" firstAttribute="width" secondItem="VDm-R3-L9S" secondAttribute="width" id="K0G-K1-HYI"/>
                             <constraint firstItem="VDm-R3-L9S" firstAttribute="top" secondItem="9t6-HC-BO2" secondAttribute="top" constant="20" id="OHe-0n-9Lg"/>
                             <constraint firstItem="VJd-Gp-qVc" firstAttribute="trailing" secondItem="HRj-7g-pho" secondAttribute="trailing" constant="16" id="eg4-ZM-4so"/>
                             <constraint firstAttribute="trailing" secondItem="VDm-R3-L9S" secondAttribute="trailing" id="h9J-4r-nEz"/>
-                            <constraint firstItem="i0Q-v5-JbL" firstAttribute="height" secondItem="VDm-R3-L9S" secondAttribute="height" id="j33-Yp-RMx"/>
                             <constraint firstItem="VJd-Gp-qVc" firstAttribute="trailing" secondItem="Yk2-7C-55U" secondAttribute="trailing" constant="16" id="oBL-EG-6x4"/>
-                            <constraint firstItem="i0Q-v5-JbL" firstAttribute="centerY" secondItem="VDm-R3-L9S" secondAttribute="centerY" id="oe3-To-zEr"/>
                             <constraint firstItem="VDm-R3-L9S" firstAttribute="leading" secondItem="9t6-HC-BO2" secondAttribute="leading" id="va2-0O-PNG"/>
                             <constraint firstItem="Yk2-7C-55U" firstAttribute="top" secondItem="VJd-Gp-qVc" secondAttribute="top" constant="16" id="wOj-DZ-FGA"/>
                         </constraints>
