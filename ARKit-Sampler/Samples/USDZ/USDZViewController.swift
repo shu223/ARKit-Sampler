@@ -68,6 +68,6 @@ extension USDZViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
         print("\(self.classForCoder)/" + #function)
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-        planeAnchor.findPlaneNode(on: node)?.removeFromParentNode()
+        planeAnchor.findPlaneGeometryNode(on: node)?.removeFromParentNode()
     }
 }
