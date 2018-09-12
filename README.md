@@ -115,7 +115,7 @@ A sample to show how to use `.usdz` files with ARKit.
 
 **Shuichi Tsutsumi**
 
-iOS programmer from Japan.
+Freelance iOS programmer from Japan.
 
 - PAST WORKS:  [My Profile Summary](https://medium.com/@shu223/my-profile-summary-f14bfc1e7099#.vdh0i7clr)
 - PROFILES: [LinkedIn](https://www.linkedin.com/in/shuichi-tsutsumi-525b755b/)
