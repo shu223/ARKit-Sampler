@@ -30,7 +30,6 @@
 		8A783E542078D44B00B3A2D0 /* ShapedPlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */; };
 		8A783E562078D46F00B3A2D0 /* ShapedPlane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */; };
 		8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921C91F718E040087C2B0 /* AppDelegate.swift */; };
-		8A8921CC1F718E040087C2B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921CB1F718E040087C2B0 /* ViewController.swift */; };
 		8A8921CF1F718E040087C2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921CD1F718E040087C2B0 /* Main.storyboard */; };
 		8A8921D11F718E040087C2B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921D01F718E040087C2B0 /* Assets.xcassets */; };
 		8A8921D41F718E040087C2B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8921D21F718E040087C2B0 /* LaunchScreen.storyboard */; };
@@ -86,7 +85,6 @@
 		8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapedPlane.storyboard; sourceTree = "<group>"; };
 		8A8921C61F718E040087C2B0 /* ARKit-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARKit-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8921C91F718E040087C2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A8921CB1F718E040087C2B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A8921CE1F718E040087C2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A8921D01F718E040087C2B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A8921D31F718E040087C2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 				8A8921D21F718E040087C2B0 /* LaunchScreen.storyboard */,
 				8A8921CD1F718E040087C2B0 /* Main.storyboard */,
 				8A8921C91F718E040087C2B0 /* AppDelegate.swift */,
-				8A8921CB1F718E040087C2B0 /* ViewController.swift */,
 				8A8921DB1F7190010087C2B0 /* RootViewController.swift */,
 				8A086D931F71941C00951ABF /* RootViewCell.swift */,
 				8A8921DD1F7191370087C2B0 /* SampleDataSource.swift */,
@@ -516,7 +513,6 @@
 				8A9C49D51F71C5D900C8CB69 /* ARObjectDetectionViewController.swift in Sources */,
 				8A086DA31F7198D900951ABF /* SceneKitUtils.swift in Sources */,
 				8A086DAB1F71A08900951ABF /* VirtualObjectViewController.swift in Sources */,
-				8A8921CC1F718E040087C2B0 /* ViewController.swift in Sources */,
 				8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */,
 				8A9C49D91F71C65B00C8CB69 /* Inceptionv3.mlmodel in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
