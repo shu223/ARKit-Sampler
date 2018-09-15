@@ -19,7 +19,7 @@ class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, SCNDebugOptions.showWireframe]
+        sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints, SCNDebugOptions.showWireframe]
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -17,7 +17,7 @@ class ARSCNProgramViewController: UIViewController, ARSCNViewDelegate {
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints]
     }
     
     override func viewWillAppear(_ animated: Bool) {

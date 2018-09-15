@@ -19,7 +19,7 @@ class USDZViewController: UIViewController {
         
         sceneView.delegate = self
         sceneView.scene = SCNScene()
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints]
         
         runSession()
     }

@@ -90,7 +90,7 @@ class MetalImageView: MTKView, MTKViewDelegate {
     // =========================================================================
     // MARK: - Private
         
-    private func transform(contentMode: UIViewContentMode) {
+    private func transform(contentMode: UIView.ContentMode) {
         guard let device = device else {fatalError()}
         guard let drawable = currentDrawable, let texture = texture else {return}
         guard texture.width != drawable.texture.width || texture.height != drawable.texture.height else {
@@ -207,7 +207,7 @@ extension MTLDevice {
     }
 }
 
-extension UIViewContentMode {
+extension UIView.ContentMode {
     func scaleTransform(from inTexture: MTLTexture, to outTexture: MTLTexture) -> MPSScaleTransform {
         var scaleX: Double
         var scaleY: Double

@@ -33,7 +33,7 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
         model = try! VNCoreMLModel(for: Inceptionv3().model)
         
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints]
         sceneView.scene = SCNScene()
     }
 

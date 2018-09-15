@@ -37,7 +37,7 @@ extension SCNNode {
     
     class func textNode(text: String) -> SCNNode {
         let geometry = SCNText(string: text, extrusionDepth: 0.01)
-        geometry.alignmentMode = kCAAlignmentCenter
+        geometry.alignmentMode = convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center)
         if let material = geometry.firstMaterial {
             material.diffuse.contents = UIColor.white
             material.isDoubleSided = true
@@ -118,3 +118,8 @@ extension SCNView {
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCATextLayerAlignmentMode(_ input: CATextLayerAlignmentMode) -> String {
+	return input.rawValue
+}

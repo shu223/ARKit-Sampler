@@ -35,7 +35,7 @@ class ARDrawingViewController: UIViewController, ARSCNViewDelegate {
         colorSlider.previewEnabled = true
         
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints]
         sceneView.scene = SCNScene()
 
         statusLabel.text = "Wait..."

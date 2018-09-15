@@ -23,7 +23,7 @@ class ARMetalViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
 
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints]
         sceneView.scene = SCNScene()
         
         label.text = "Wait..."
