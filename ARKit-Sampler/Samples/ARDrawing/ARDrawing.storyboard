@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-HX-9Kx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aui-9X-wvb" customClass="ColorSlider" customModule="ColorSlider">
                                 <rect key="frame" x="16" y="607" width="343" height="40"/>
@@ -52,7 +53,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　🖋" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vp2-kz-t7t">
-                                <rect key="frame" x="115.5" y="301.5" width="145.5" height="84"/>
+                                <rect key="frame" x="115" y="301.5" width="145.5" height="84"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,7 +71,7 @@
                             <constraint firstItem="HLL-HX-9Kx" firstAttribute="leading" secondItem="gPU-jo-y2c" secondAttribute="leading" id="SUk-d9-2no"/>
                             <constraint firstItem="vp2-kz-t7t" firstAttribute="centerY" secondItem="gPU-jo-y2c" secondAttribute="centerY" constant="10" id="VxQ-FB-ZP3"/>
                             <constraint firstItem="y4J-vc-twd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gPU-jo-y2c" secondAttribute="leading" constant="20" symbolic="YES" id="bFa-br-FIJ"/>
-                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="gPU-jo-y2c" secondAttribute="top" constant="20" id="das-2I-MxV"/>
+                            <constraint firstItem="HLL-HX-9Kx" firstAttribute="top" secondItem="gPU-jo-y2c" secondAttribute="top" id="das-2I-MxV"/>
                             <constraint firstItem="Xc8-kF-BND" firstAttribute="leading" secondItem="YFY-Vv-2jf" secondAttribute="leading" constant="16" id="e67-gO-z7f"/>
                             <constraint firstItem="Xc8-kF-BND" firstAttribute="top" secondItem="YFY-Vv-2jf" secondAttribute="top" constant="16" id="hmv-GX-R0J"/>
                             <constraint firstItem="YFY-Vv-2jf" firstAttribute="bottom" secondItem="aui-9X-wvb" secondAttribute="bottom" constant="20" id="mXq-Rk-FLD"/>
