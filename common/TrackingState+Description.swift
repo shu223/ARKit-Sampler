@@ -24,6 +24,8 @@ extension ARCamera.TrackingState {
                 return "TRACKING LIMITED\nInitialization in progress."
             case .relocalizing:
                 return "TRACKING LIMITED\nRelocalization in progress."
+            @unknown default:
+                fatalError()
             }
         }
     }

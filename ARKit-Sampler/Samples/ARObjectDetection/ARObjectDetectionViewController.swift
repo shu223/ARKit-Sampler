@@ -111,7 +111,7 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
             if prevRes.identifier == result.identifier {
                 // when the result is more confident, remove the older one
                 if prevRes.confidence < result.confidence {
-                    if let index = tags.index(of: tag) {
+                    if let index = tags.firstIndex(of: tag) {
                         tags.remove(at: index)
                     }
                     tag.removeFromParentNode()
@@ -170,7 +170,7 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
 
     private func removeTag(tag: TagNode) {
         tag.removeFromParentNode()
-        guard let index = tags.index(of: tag) else {return}
+        guard let index = tags.firstIndex(of: tag) else {return}
         tags.remove(at: index)
     }
     
