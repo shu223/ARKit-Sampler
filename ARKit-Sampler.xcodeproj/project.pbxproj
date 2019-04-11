@@ -376,7 +376,6 @@
 				8A8921C31F718E040087C2B0 /* Frameworks */,
 				8A8921C41F718E040087C2B0 /* Resources */,
 				3BE237804945FD9F9FF71C87 /* [CP] Embed Pods Frameworks */,
-				A9D92332B236CD5478FE9F70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,7 +457,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ColorSlider/ColorSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -467,22 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9D92332B236CD5478FE9F70 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ARKit-Sampler/Pods-ARKit-Sampler-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0102A004559E363A8723412 /* [CP] Check Pods Manifest.lock */ = {
