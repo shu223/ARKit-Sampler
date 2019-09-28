@@ -31,9 +31,6 @@
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" verticalCompressionResistancePriority="751" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ven-4d-tqw">
                                             <rect key="frame" x="15" y="40.5" width="324.5" height="13.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="13.5" id="dQp-py-aKk"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>

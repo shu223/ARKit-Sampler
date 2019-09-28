@@ -37,15 +37,7 @@ class RootViewController: UITableViewController {
     }
     
     // MARK: UITableViewDelegate
-    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
-//
-//    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
-    
+        
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sample = dataSource.samples[(indexPath as NSIndexPath).row]
         
