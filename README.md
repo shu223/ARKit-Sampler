@@ -91,12 +91,6 @@ Simplest Face-Based AR implementation.
 
 ![](README_resources/face.gif)
 
-### Vertical Plane Detection
-
-**ARKit 1.5**
-
-A sample to show how to detect vertical planes.
-
 
 ### Irregularly-Shaped Plane Detection
 

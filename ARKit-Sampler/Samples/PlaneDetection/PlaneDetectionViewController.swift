@@ -25,7 +25,7 @@ class PlaneDetectionViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
 
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = [.horizontal, .vertical]
 
         sceneView.session.run(configuration)
     }
@@ -40,7 +40,8 @@ class PlaneDetectionViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        planeAnchor.addPlaneNode(on: node, contents: UIColor.arBlue.withAlphaComponent(0.3))
+        let color = planeAnchor.alignment == .vertical ? UIColor.arBlue : UIColor.yellow
+        planeAnchor.addPlaneNode(on: node, contents: color.withAlphaComponent(0.5))
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
