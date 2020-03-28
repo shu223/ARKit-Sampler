@@ -74,10 +74,10 @@
 		8A086DA61F719C2600951ABF /* PlaneDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaneDetection.storyboard; sourceTree = "<group>"; };
 		8A086DA91F71A08900951ABF /* VirtualObjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectViewController.swift; sourceTree = "<group>"; };
 		8A086DAA1F71A08900951ABF /* VirtualObject.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VirtualObject.storyboard; sourceTree = "<group>"; };
-		8A189525214350CC00282899 /* wheelbarrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = wheelbarrow.usdz; sourceTree = "<group>"; };
+		8A189525214350CC00282899 /* wheelbarrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = wheelbarrow.usdz; sourceTree = "<group>"; };
 		8A189528214350D400282899 /* USDZViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USDZViewController.swift; sourceTree = "<group>"; };
 		8A189529214350D400282899 /* USDZ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = USDZ.storyboard; sourceTree = "<group>"; };
-		8A18952C214355C900282899 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = teapot.usdz; sourceTree = "<group>"; };
+		8A18952C214355C900282899 /* teapot.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = teapot.usdz; sourceTree = "<group>"; };
 		8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSCNProgramViewController.swift; sourceTree = "<group>"; };
 		8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSCNProgram.storyboard; sourceTree = "<group>"; };
 		8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ARSCNProgramShader.metal; sourceTree = "<group>"; };
@@ -674,7 +674,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.ARKit-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -692,7 +692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.ARKit-Sampler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
