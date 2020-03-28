@@ -48,7 +48,7 @@ class ShapedPlaneViewController: UIViewController, ARSCNViewDelegate {
         planeGeometry.update(from: planeAnchor.geometry)
         
         let color = planeAnchor.alignment == .horizontal ? UIColor.arBlue : UIColor.green
-        planeAnchor.addPlaneNode(on: node, geometry: planeGeometry, contents: color.withAlphaComponent(0.3))
+        planeAnchor.addPlaneNode(on: node, geometry: planeGeometry, contents: color.withAlphaComponent(0.5))
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {

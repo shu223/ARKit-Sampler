@@ -40,7 +40,7 @@ class PlaneDetectionViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {fatalError()}
-        let color = planeAnchor.alignment == .vertical ? UIColor.arBlue : UIColor.yellow
+        let color = planeAnchor.alignment == .horizontal ? UIColor.arBlue : UIColor.green
         planeAnchor.addPlaneNode(on: node, contents: color.withAlphaComponent(0.5))
     }
     
