@@ -27,6 +27,7 @@
 		8A430D312020D11E00B646D3 /* ARSCNProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */; };
 		8A430D332020D13200B646D3 /* ARSCNProgram.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */; };
 		8A430D352020D15400B646D3 /* ARSCNProgramShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */; };
+		8A5E85C424341F1E0011850E /* MobileNetV2Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8A5E85C324341F1E0011850E /* MobileNetV2Int8LUT.mlmodel */; };
 		8A783E542078D44B00B3A2D0 /* ShapedPlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */; };
 		8A783E562078D46F00B3A2D0 /* ShapedPlane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */; };
 		8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8921C91F718E040087C2B0 /* AppDelegate.swift */; };
@@ -46,7 +47,6 @@
 		8A9C49D41F71C5D900C8CB69 /* ARObjectDetection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49D11F71C5D900C8CB69 /* ARObjectDetection.storyboard */; };
 		8A9C49D51F71C5D900C8CB69 /* ARObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49D21F71C5D900C8CB69 /* ARObjectDetectionViewController.swift */; };
 		8A9C49D61F71C5D900C8CB69 /* TagNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49D31F71C5D900C8CB69 /* TagNode.swift */; };
-		8A9C49D91F71C65B00C8CB69 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49D81F71C65B00C8CB69 /* Inceptionv3.mlmodel */; };
 		8A9C49E11F71CD0D00C8CB69 /* ARMetal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C49DB1F71CD0D00C8CB69 /* ARMetal.storyboard */; };
 		8A9C49E21F71CD0D00C8CB69 /* ARMetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49DC1F71CD0D00C8CB69 /* ARMetalViewController.swift */; };
 		8A9C49E51F71CD0D00C8CB69 /* MetalImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9C49E01F71CD0D00C8CB69 /* MetalImageView.swift */; };
@@ -79,6 +79,7 @@
 		8A430D302020D11E00B646D3 /* ARSCNProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARSCNProgramViewController.swift; sourceTree = "<group>"; };
 		8A430D322020D13200B646D3 /* ARSCNProgram.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARSCNProgram.storyboard; sourceTree = "<group>"; };
 		8A430D342020D15400B646D3 /* ARSCNProgramShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ARSCNProgramShader.metal; sourceTree = "<group>"; };
+		8A5E85C324341F1E0011850E /* MobileNetV2Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2Int8LUT.mlmodel; sourceTree = "<group>"; };
 		8A783E532078D44B00B3A2D0 /* ShapedPlaneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapedPlaneViewController.swift; sourceTree = "<group>"; };
 		8A783E552078D46F00B3A2D0 /* ShapedPlane.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShapedPlane.storyboard; sourceTree = "<group>"; };
 		8A8921C61F718E040087C2B0 /* ARKit-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARKit-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +101,6 @@
 		8A9C49D11F71C5D900C8CB69 /* ARObjectDetection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARObjectDetection.storyboard; sourceTree = "<group>"; };
 		8A9C49D21F71C5D900C8CB69 /* ARObjectDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARObjectDetectionViewController.swift; sourceTree = "<group>"; };
 		8A9C49D31F71C5D900C8CB69 /* TagNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagNode.swift; sourceTree = "<group>"; };
-		8A9C49D81F71C65B00C8CB69 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		8A9C49DB1F71CD0D00C8CB69 /* ARMetal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARMetal.storyboard; sourceTree = "<group>"; };
 		8A9C49DC1F71CD0D00C8CB69 /* ARMetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARMetalViewController.swift; sourceTree = "<group>"; };
 		8A9C49E01F71CD0D00C8CB69 /* MetalImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalImageView.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 		8A9C49D71F71C65B00C8CB69 /* mlmodels */ = {
 			isa = PBXGroup;
 			children = (
-				8A9C49D81F71C65B00C8CB69 /* Inceptionv3.mlmodel */,
+				8A5E85C324341F1E0011850E /* MobileNetV2Int8LUT.mlmodel */,
 			);
 			path = mlmodels;
 			sourceTree = "<group>";
@@ -480,11 +480,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AAECE141F7850D600C20BF9 /* ARMetalImageView.swift in Sources */,
+				8A5E85C424341F1E0011850E /* MobileNetV2Int8LUT.mlmodel in Sources */,
 				8A9C49D51F71C5D900C8CB69 /* ARObjectDetectionViewController.swift in Sources */,
 				8A086DA31F7198D900951ABF /* SceneKitUtils.swift in Sources */,
 				8A086DAB1F71A08900951ABF /* VirtualObjectViewController.swift in Sources */,
 				8A9C49C81F71B99900C8CB69 /* ARMeasureViewController.swift in Sources */,
-				8A9C49D91F71C65B00C8CB69 /* Inceptionv3.mlmodel in Sources */,
 				8A8921CA1F718E040087C2B0 /* AppDelegate.swift in Sources */,
 				8A086DA11F7198D900951ABF /* ARPlaneAnchor+Visualize.swift in Sources */,
 				8ADD3E7E1FF175AC00D988BD /* ARFaceNode.swift in Sources */,

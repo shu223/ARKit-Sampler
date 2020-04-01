@@ -30,7 +30,11 @@ class ARObjectDetectionViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        model = try! VNCoreMLModel(for: Inceptionv3().model)
+        if #available(iOS 12.0, *) {
+            model = try! VNCoreMLModel(for: MobileNetV2Int8LUT().model)
+        } else {
+            // Fallback on earlier versions
+        }
         
         sceneView.delegate = self
         sceneView.debugOptions = [SCNDebugOptions.showFeaturePoints]
