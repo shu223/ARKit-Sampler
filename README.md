@@ -13,11 +13,9 @@ ARKit-Sampler is a collection of ARKit samples.
 
 ## How to build
 
-1. Download `Inceptionv3.mlmodel` from [here](https://developer.apple.com/machine-learning/
-), then put it into the `mlmodels` folder.
-2. Open `ARKit-Sampler.xcworkspace` with Xcode 9 and build it.
+Open `ARKit-Sampler.xcworkspace` with Xcode and build it.
 
-It can **NOT** run on **Simulator**. (Because it uses Metal.)
+It can **NOT** run on **Simulator**.
 
 
 ## Contents
