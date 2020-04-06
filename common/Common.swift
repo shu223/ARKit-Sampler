@@ -84,8 +84,7 @@ extension SCNNode {
     
     func loadUsdz(name: String) {
         guard let url = Bundle.main.url(forResource: name, withExtension: "usdz") else { fatalError() }
-        let mdlAsset = MDLAsset(url: url)
-        let scene = SCNScene(mdlAsset: mdlAsset)
+        let scene = try! SCNScene(url: url, options: [.checkConsistency: true])
         for child in scene.rootNode.childNodes {
             child.geometry?.firstMaterial?.lightingModel = .physicallyBased
             addChildNode(child)
